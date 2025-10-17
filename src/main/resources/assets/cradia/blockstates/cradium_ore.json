@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cradia:block/cradium_ore"
+    }
+  }
+}

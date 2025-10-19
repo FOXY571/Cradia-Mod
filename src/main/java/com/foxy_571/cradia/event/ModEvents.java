@@ -2,7 +2,8 @@ package com.foxy_571.cradia.event;
 
 import com.foxy_571.cradia.Cradia;
 import com.foxy_571.cradia.item.custom.LongSwordItem;
-import com.foxy_571.cradia.util.PlayerReachHandler;
+import com.foxy_571.cradia.util.AttributeHandler;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -17,9 +18,11 @@ public class ModEvents {
         if (player.level().isClientSide()) return;
 
         if (player.getMainHandItem().getItem() instanceof LongSwordItem) {
-            PlayerReachHandler.applyEntityReachModifier(player, 1.0);
+            //PlayerReachHandler.applyEntityReachModifier(player, 1.0);
+            AttributeHandler.modifyEntityAttribute(player, Attributes.ENTITY_INTERACTION_RANGE, 1.0);
         } else {
-            PlayerReachHandler.removeEntityReachModifier(player);
+            //PlayerReachHandler.removeEntityReachModifier(player);
+            AttributeHandler.removeEntityAttributeModifier(player, Attributes.ENTITY_INTERACTION_RANGE);
         }
     }
 }

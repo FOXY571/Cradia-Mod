@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModBlocks.CRADIUM_ORE.get()))
             .title(Component.translatable("creativetab.cradia.cradia_tab"))
             .displayItems((itemDisplayParameters, output) -> {
+                output.accept(ModItems.IRON_LONG_SWORD);
                 output.accept(ModBlocks.CRADIUM_ORE);
             }).build());
 

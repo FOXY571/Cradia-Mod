@@ -1,6 +1,7 @@
 {
-  "item.cradia.iron_long_sword": "Iron Long Sword",
-
+  "item.cradia.cradium_ingot": "Cradium Ingot",
+  "item.cradia.cradium_nugget": "Cradium Nugget",
+  "item.cradia.cradium_long_sword": "Cradium Long Sword",
   "block.cradia.cradium_ore": "Cradium Ore",
 
   "creativetab.cradia.cradia_tab": "Cradia"

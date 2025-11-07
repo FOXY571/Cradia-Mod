@@ -1,6 +1,6 @@
 {
   "parent": "cradia:item/long_handheld",
   "textures": {
-    "layer0": "cradia:item/iron_long_sword"
+    "layer0": "cradia:item/cradium_long_sword"
   }
 }

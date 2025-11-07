@@ -15,11 +15,14 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Cradia.MOD_ID);
 
     public static final Supplier<CreativeModeTab> CRADIA_TAB = CREATIVE_MODE_TABS.register("cradia_tab", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModBlocks.CRADIUM_ORE.get()))
+            .icon(() -> new ItemStack(ModItems.CRADIUM_INGOT.get()))
             .title(Component.translatable("creativetab.cradia.cradia_tab"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModItems.IRON_LONG_SWORD);
                 output.accept(ModBlocks.CRADIUM_ORE);
+
+                output.accept(ModItems.CRADIUM_INGOT);
+                output.accept(ModItems.CRADIUM_NUGGET);
+                output.accept(ModItems.CRADIUM_LONG_SWORD);
             }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "cradia:cradium_ingot"
+    }
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    "X#X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:cradium_long_sword"
+  }
+}

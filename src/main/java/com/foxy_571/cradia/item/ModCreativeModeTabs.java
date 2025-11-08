@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.cradia.cradia_tab"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModBlocks.CRADIUM_ORE);
+                output.accept(ModBlocks.CRADIUM_BLOCK);
 
                 output.accept(ModItems.CRADIUM_INGOT);
                 output.accept(ModItems.CRADIUM_NUGGET);

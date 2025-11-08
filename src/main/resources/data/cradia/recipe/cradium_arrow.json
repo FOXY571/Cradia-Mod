@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "cradia:cradium_nugget"
+    },
+    "Y": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "X",
+    "#",
+    "Y"
+  ],
+  "result": {
+    "count": 4,
+    "id": "cradia:cradium_arrow"
+  }
+}

@@ -6,6 +6,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -18,6 +19,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CRADIUM_ORE = registerBlock("cradium_ore",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final DeferredBlock<Block> CRADIUM_BLOCK = registerBlock("cradium_block",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).sound(SoundType.METAL).mapColor(MapColor.COLOR_LIGHT_GREEN)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

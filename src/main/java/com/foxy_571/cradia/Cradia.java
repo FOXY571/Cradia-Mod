@@ -1,8 +1,11 @@
 package com.foxy_571.cradia;
 
 import com.foxy_571.cradia.block.ModBlocks;
+import com.foxy_571.cradia.entity.ModEntities;
+import com.foxy_571.cradia.entity.client.TieredArrowRenderer;
 import com.foxy_571.cradia.item.ModCreativeModeTabs;
 import com.foxy_571.cradia.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -13,7 +16,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraft.client.Minecraft;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -31,8 +33,9 @@ public class Cradia {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
         ModCreativeModeTabs.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CradiaMod) to respond directly to events.
@@ -41,15 +44,13 @@ public class Cradia {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -57,9 +58,7 @@ public class Cradia {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.TIERED_ARROW.get(), TieredArrowRenderer::new);
         }
     }
 }

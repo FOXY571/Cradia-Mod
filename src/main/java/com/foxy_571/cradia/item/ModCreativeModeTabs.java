@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.CRADIUM_INGOT);
                 output.accept(ModItems.CRADIUM_NUGGET);
                 output.accept(ModItems.CRADIUM_LONG_SWORD);
+                output.accept(ModItems.CRADIUM_ARROW);
             }).build());
 
     public static void register(IEventBus eventBus) {

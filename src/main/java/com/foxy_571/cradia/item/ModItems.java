@@ -2,6 +2,7 @@ package com.foxy_571.cradia.item;
 
 import com.foxy_571.cradia.Cradia;
 import com.foxy_571.cradia.item.custom.LongSwordItem;
+import com.foxy_571.cradia.item.custom.TieredArrowItem;
 import com.foxy_571.cradia.item.tier.ModTiers;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -13,9 +14,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> CRADIUM_INGOT = ITEMS.register("cradium_ingot", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CRADIUM_NUGGET = ITEMS.register("cradium_nugget", () -> new Item(new Item.Properties()));
-
     public static final DeferredItem<LongSwordItem> CRADIUM_LONG_SWORD = ITEMS.register("cradium_long_sword",
             () -> new LongSwordItem(ModTiers.CRADIUM, (new Item.Properties()).attributes(LongSwordItem.createAttributes(ModTiers.CRADIUM, 3, -2.7F))));
+    public static final DeferredItem<TieredArrowItem> CRADIUM_ARROW = ITEMS.register("cradium_arrow",
+            () -> new TieredArrowItem(ModTiers.CRADIUM, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

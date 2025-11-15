@@ -21,6 +21,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.CRADIUM_ORE);
                 output.accept(ModBlocks.CRADIUM_BLOCK);
 
+                output.accept(ModItems.ADRENA_INGOT);
+                output.accept(ModItems.ADRENA_NUGGET);
+                output.accept(ModItems.ADRENA_LONG_SWORD);
+                output.accept(ModItems.ADRENA_ARROW);
                 output.accept(ModItems.CRADIUM_INGOT);
                 output.accept(ModItems.CRADIUM_NUGGET);
                 output.accept(ModItems.CRADIUM_LONG_SWORD);

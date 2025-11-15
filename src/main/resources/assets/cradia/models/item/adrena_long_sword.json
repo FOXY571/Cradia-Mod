@@ -1,0 +1,6 @@
+{
+  "parent": "cradia:item/long_handheld",
+  "textures": {
+    "layer0": "cradia:item/adrena_long_sword"
+  }
+}

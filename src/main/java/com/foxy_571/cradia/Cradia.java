@@ -58,7 +58,8 @@ public class Cradia {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.TIERED_ARROW.get(), TieredArrowRenderer::new);
+            EntityRenderers.register(ModEntities.ADRENA_ARROW.get(), TieredArrowRenderer::new);
+            EntityRenderers.register(ModEntities.CRADIUM_ARROW.get(), TieredArrowRenderer::new);
         }
     }
 }

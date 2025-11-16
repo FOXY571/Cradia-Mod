@@ -1,7 +1,5 @@
 package com.foxy_571.cradia.item.custom;
 
-import com.foxy_571.cradia.entity.custom.AdrenaArrow;
-import com.foxy_571.cradia.entity.custom.CradiumArrow;
 import com.foxy_571.cradia.entity.custom.TieredArrow;
 import com.foxy_571.cradia.item.tier.CradiaTier;
 import net.minecraft.core.Direction;
@@ -23,24 +21,14 @@ public class TieredArrowItem extends ArrowItem {
         this.tier = tier;
     }
 
-    // These hardcoded values should probably be dealt with in the future
     @Override
     public @NotNull AbstractArrow createArrow(@NotNull Level level, @NotNull ItemStack ammo, @NotNull LivingEntity shooter, @Nullable ItemStack weapon) {
-        return switch (tier.getName()) {
-            case "cradium" -> new CradiumArrow(level, shooter, ammo.copyWithCount(1), weapon);
-            case "adrena" -> new AdrenaArrow(level, shooter, ammo.copyWithCount(1), weapon);
-            default -> new AdrenaArrow(level, shooter, ammo.copyWithCount(1), weapon);
-        };
+        return new TieredArrow(level, shooter, ammo.copyWithCount(1), weapon);
     }
 
-    // These hardcoded values should probably be dealt with in the future
     @Override
     public @NotNull Projectile asProjectile(@NotNull Level level, @NotNull Position pos, @NotNull ItemStack stack, @NotNull Direction direction) {
-        TieredArrow arrow = switch (tier.getName()) {
-            case "cradium" -> new CradiumArrow(level, pos.x(), pos.y(), pos.z(), stack.copyWithCount(1), null);
-            case "adrena" -> new AdrenaArrow(level, pos.x(), pos.y(), pos.z(), stack.copyWithCount(1), null);
-            default -> new AdrenaArrow(level, pos.x(), pos.y(), pos.z(), stack.copyWithCount(1), null);
-        };
+        TieredArrow arrow = new TieredArrow(level, pos.x(), pos.y(), pos.z(), stack.copyWithCount(1), null);
         arrow.pickup = AbstractArrow.Pickup.ALLOWED;
         return arrow;
     }

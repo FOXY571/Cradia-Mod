@@ -18,17 +18,8 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModItems.CRADIUM_INGOT.get()))
             .title(Component.translatable("creativetab.cradia.cradia_tab"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlocks.CRADIUM_ORE);
-                output.accept(ModBlocks.CRADIUM_BLOCK);
-
-                output.accept(ModItems.ADRENA_INGOT);
-                output.accept(ModItems.ADRENA_NUGGET);
-                output.accept(ModItems.ADRENA_LONG_SWORD);
-                output.accept(ModItems.ADRENA_ARROW);
-                output.accept(ModItems.CRADIUM_INGOT);
-                output.accept(ModItems.CRADIUM_NUGGET);
-                output.accept(ModItems.CRADIUM_LONG_SWORD);
-                output.accept(ModItems.CRADIUM_ARROW);
+                ModBlocks.BLOCKS.getEntries().forEach(block -> output.accept(block.get()));
+                ModItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
             }).build());
 
     public static void register(IEventBus eventBus) {

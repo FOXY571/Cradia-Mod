@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cradium_ingot",
+  "ingredients": [
+    {
+      "item": "cradia:cradium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cradia:cradium_ingot"
+  }
+}

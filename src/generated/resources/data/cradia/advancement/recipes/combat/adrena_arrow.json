@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adrena_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:adrena_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cradia:adrena_arrow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_adrena_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cradia:adrena_arrow"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 2.0,
+  "group": "cradium_scrap",
+  "ingredient": {
+    "item": "cradia:cradium_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "cradia:cradium_scrap"
+  }
+}

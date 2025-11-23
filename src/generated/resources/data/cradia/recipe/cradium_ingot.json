@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cradium_ingot",
+  "key": {
+    "#": {
+      "item": "cradia:cradium_scrap"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:cradium_ingot"
+  }
+}

@@ -5,6 +5,7 @@ import com.foxy_571.cradia.entity.ModEntities;
 import com.foxy_571.cradia.entity.client.TieredArrowRenderer;
 import com.foxy_571.cradia.item.ModCreativeModeTabs;
 import com.foxy_571.cradia.item.ModItems;
+import com.foxy_571.cradia.worldgen.feature.ModFeatures;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import org.slf4j.Logger;
 
@@ -36,6 +37,8 @@ public class Cradia {
         ModCreativeModeTabs.register(modEventBus);
 
         ModEntities.register(modEventBus);
+
+        ModFeatures.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CradiaMod) to respond directly to events.

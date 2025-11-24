@@ -1,0 +1,4 @@
+// 1.21	2025-11-24T16:53:57.8298699	Registries
+8b2585cf3304f1fafee33f431bf63748050ebe15 data/cradia/neoforge/biome_modifier/add_cradium_meteor.json
+040aa3ef0a7e2305a5728cd518a89dfd7244d5d2 data/cradia/worldgen/configured_feature/cradium_meteor.json
+11dc78b6ce18aedf8eb6e33e5d696a5605164efb data/cradia/worldgen/placed_feature/cradium_meteor_placed.json

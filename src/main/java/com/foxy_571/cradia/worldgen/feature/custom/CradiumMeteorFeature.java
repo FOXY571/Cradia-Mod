@@ -11,8 +11,9 @@ import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
-import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -35,11 +36,21 @@ public class CradiumMeteorFeature extends TemplateFeature {
     }
 
     @Override
-    protected StructurePlaceSettings makeSettings(Rotation rotation) {
+    protected BlockPos getOffsetPosition(ResourceLocation location) {
+        if (location.getPath().equals("cradium_meteor/big_meteor")) {
+            return new BlockPos(-0, -5, -0);
+        }
+        return new BlockPos(0, -4, 0);
+    }
+
+    @Override
+    protected StructurePlaceSettings makeSettings(WorldGenLevel level, BlockPos originalPos, BlockPos posWithOffset, Rotation rotation) {
+        boolean isInWater = level.getBlockState(originalPos).getFluidState().isSource();
+
         return new StructurePlaceSettings()
                 .setRotation(rotation)
                 .setMirror(Mirror.NONE)
-                .setLiquidSettings(LiquidSettings.APPLY_WATERLOGGING);
+                .addProcessor(isInWater ? BlockIgnoreProcessor.AIR : BlockIgnoreProcessor.STRUCTURE_BLOCK);
     }
 
     @Override

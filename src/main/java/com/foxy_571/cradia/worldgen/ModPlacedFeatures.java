@@ -19,7 +19,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, CRADIUM_METEOR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRADIUM_METEOR),
-                List.of(RarityFilter.onAverageOnceEvery(32), PlacementUtils.HEIGHTMAP_WORLD_SURFACE));
+                List.of(RarityFilter.onAverageOnceEvery(500), PlacementUtils.HEIGHTMAP_TOP_SOLID));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

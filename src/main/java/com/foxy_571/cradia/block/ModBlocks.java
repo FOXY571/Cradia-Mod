@@ -19,6 +19,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CRADIUM_ORE = registerBlock("cradium_ore",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final DeferredBlock<Block> ADRENA_BLOCK = registerBlock("adrena_block",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
     public static final DeferredBlock<Block> CRADIUM_BLOCK = registerBlock("cradium_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).sound(SoundType.METAL).mapColor(MapColor.COLOR_LIGHT_GREEN)));
 

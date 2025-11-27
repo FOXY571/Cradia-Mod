@@ -1,7 +1,10 @@
-// 1.21	2025-11-22T16:50:47.3507798	Block States: cradia
+// 1.21	2025-11-27T15:28:17.3786322	Block States: cradia
+8e1a3abe3c10dd3220b4dcf8e5a80f7387e400cd assets/cradia/blockstates/adrena_block.json
 039e07475faf97668583b314a681ad7e3f0ded31 assets/cradia/blockstates/cradium_block.json
 e1bf842fa30c8acd21ccf55a85c574dfe8da619b assets/cradia/blockstates/cradium_ore.json
+fc1884b961ca9ccc6272d7855dc56edc412338b4 assets/cradia/models/block/adrena_block.json
 7bf39480ed3d548e98fc1ca1f262e0cc281a0da6 assets/cradia/models/block/cradium_block.json
 06e18f25d855b75afd066c903287c8889f5ef3b4 assets/cradia/models/block/cradium_ore.json
+59a8d9b29ebd4b8b3551b744599380503252f54a assets/cradia/models/item/adrena_block.json
 185e99ae6adba5eba16fbce130c018fa67f74f44 assets/cradia/models/item/cradium_block.json
 1fc70577f111438f2bda87feda5f78a4a39ddf8d assets/cradia/models/item/cradium_ore.json

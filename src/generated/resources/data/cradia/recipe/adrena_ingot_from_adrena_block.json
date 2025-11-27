@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "adrena_ingot",
+  "ingredients": [
+    {
+      "item": "cradia:adrena_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cradia:adrena_ingot"
+  }
+}

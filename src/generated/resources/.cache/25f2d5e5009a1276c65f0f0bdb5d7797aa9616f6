@@ -1,3 +1,4 @@
-// 1.21	2025-11-22T17:23:05.9550788	Tags for minecraft:block mod id cradia
-bcb83606d18c7e150bf380b08d8b19dba2ab2ef9 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21	2025-11-27T15:28:17.3776314	Tags for minecraft:block mod id cradia
+c60c9c05341081d410af6fb5ea94b568c6cbe868 data/minecraft/tags/block/mineable/pickaxe.json
+410ecbea2843a3909a4c94fc0e7bb50e50b5c4d1 data/minecraft/tags/block/needs_diamond_tool.json
 bcb83606d18c7e150bf380b08d8b19dba2ab2ef9 data/neoforge/tags/block/needs_netherite_tool.json

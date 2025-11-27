@@ -22,7 +22,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.CRADIUM_ORE.get(),
+                ModBlocks.ADRENA_BLOCK.get(),
                 ModBlocks.CRADIUM_BLOCK.get()
+        );
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                ModBlocks.ADRENA_BLOCK.get()
         );
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(
                 ModBlocks.CRADIUM_ORE.get(),

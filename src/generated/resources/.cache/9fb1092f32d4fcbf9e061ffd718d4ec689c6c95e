@@ -1,9 +1,11 @@
-// 1.21	2025-11-22T18:47:23.7304176	Recipes
+// 1.21	2025-11-27T15:28:17.3796318	Recipes
+1335f3106f42b5a9400303c85096f4647694b350 data/cradia/advancement/recipes/building_blocks/adrena_block.json
 0f886e0642eb981154670c612857dbf36b086a12 data/cradia/advancement/recipes/building_blocks/cradium_block.json
 39b407ca441bf159759db53a2665710839d742ba data/cradia/advancement/recipes/combat/adrena_arrow.json
 e9d391501cb650649e6b855fb67515d5a04522ef data/cradia/advancement/recipes/combat/adrena_long_sword.json
 85f68f786e6b23f2be144933ce35df13b4a00f82 data/cradia/advancement/recipes/combat/cradium_arrow.json
 16d69f4db6392253d7dce7ff7c2bf93e471e8c4b data/cradia/advancement/recipes/combat/cradium_long_sword.json
+c3acd7e248c15755cd5a470c1501730957842d63 data/cradia/advancement/recipes/misc/adrena_ingot_from_adrena_block.json
 da84a79e2c6999a79a66c54c1f9b673e71ebb9ba data/cradia/advancement/recipes/misc/adrena_ingot_from_nuggets.json
 97a175cfb31914e0ad12b93052484e524188cede data/cradia/advancement/recipes/misc/adrena_nugget.json
 8001b2245a93e13b12a3342751bc3777d72c8cfb data/cradia/advancement/recipes/misc/cradium_ingot.json
@@ -13,6 +15,8 @@ da84a79e2c6999a79a66c54c1f9b673e71ebb9ba data/cradia/advancement/recipes/misc/ad
 7c11a5671e76a3e81f065b6fe48f034ce49290d2 data/cradia/advancement/recipes/misc/cradium_scrap_from_blasting_cradium_ore.json
 31d857588ae8bb2472496262b5f8e0ff85afd0c6 data/cradia/advancement/recipes/misc/cradium_scrap_from_smelting_cradium_ore.json
 9977a3a9ac47daad23d052bdb9b5e98fef538f17 data/cradia/recipe/adrena_arrow.json
+003780061664abf30b5ef7cb2760a39ec401cd06 data/cradia/recipe/adrena_block.json
+23aa6deda7d6dc74921ea08a80642285ceeb2f02 data/cradia/recipe/adrena_ingot_from_adrena_block.json
 345549cb598f0b63db6d591df8c16504e4adb14d data/cradia/recipe/adrena_ingot_from_nuggets.json
 a77ce2bd6bff2c554516c9c6a309cc5f151294d6 data/cradia/recipe/adrena_long_sword.json
 e564fdcd3e9df659292fbe850f5816d8e0e1c93c data/cradia/recipe/adrena_nugget.json

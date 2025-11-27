@@ -15,6 +15,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.CRADIUM_ORE);
+        simpleBlockWithItem(ModBlocks.ADRENA_BLOCK);
         simpleBlockWithItem(ModBlocks.CRADIUM_BLOCK);
     }
 

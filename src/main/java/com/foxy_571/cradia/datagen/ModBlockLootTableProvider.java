@@ -18,6 +18,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.CRADIUM_ORE.get());
+        dropSelf(ModBlocks.ADRENA_BLOCK.get());
         dropSelf(ModBlocks.CRADIUM_BLOCK.get());
     }
 

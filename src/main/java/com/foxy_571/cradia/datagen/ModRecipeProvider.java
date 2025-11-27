@@ -22,6 +22,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
+        // adrena_block
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADRENA_BLOCK)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.ADRENA_INGOT)
+                .unlockedBy("has_adrena_ingot", has(ModItems.ADRENA_INGOT))
+                .save(recipeOutput);
+
         // cradium_block
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRADIUM_BLOCK)
                 .pattern("###")
@@ -94,6 +103,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.ADRENA_NUGGET)
                 .unlockedBy("has_adrena_nugget", has(ModItems.ADRENA_NUGGET))
                 .save(recipeOutput, "cradia:adrena_ingot_from_nuggets");
+
+        // adrena_ingot_from_adrena_block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ADRENA_INGOT, 9)
+                .group("adrena_ingot")
+                .requires(ModBlocks.ADRENA_BLOCK)
+                .unlockedBy("has_adrena_block", has(ModBlocks.ADRENA_BLOCK))
+                .save(recipeOutput, "cradia:adrena_ingot_from_adrena_block");
 
         // cradim_scrap_from_smelting_cradium_ore & cradium_scrap_from_blasting_cradium_ore
         List<ItemLike> cradium_scrap_smeltables = List.of(ModBlocks.CRADIUM_ORE);

@@ -17,8 +17,14 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Cradia.MOD_ID);
 
+    public static final DeferredBlock<Block> ADRENA_ORE = registerBlock("adrena_ore",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_ORE)));
+    public static final DeferredBlock<Block> DEEPSLATE_ADRENA_ORE = registerBlock("deepslate_adrena_ore",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.DEEPSLATE_GOLD_ORE)));
     public static final DeferredBlock<Block> CRADIUM_ORE = registerBlock("cradium_ore",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final DeferredBlock<Block> RAW_ADRENA_BLOCK = registerBlock("raw_adrena_block",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
     public static final DeferredBlock<Block> ADRENA_BLOCK = registerBlock("adrena_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
     public static final DeferredBlock<Block> CRADIUM_BLOCK = registerBlock("cradium_block",

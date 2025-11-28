@@ -14,7 +14,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlockWithItem(ModBlocks.ADRENA_ORE);
+        simpleBlockWithItem(ModBlocks.DEEPSLATE_ADRENA_ORE);
         simpleBlockWithItem(ModBlocks.CRADIUM_ORE);
+        simpleBlockWithItem(ModBlocks.RAW_ADRENA_BLOCK);
         simpleBlockWithItem(ModBlocks.ADRENA_BLOCK);
         simpleBlockWithItem(ModBlocks.CRADIUM_BLOCK);
     }

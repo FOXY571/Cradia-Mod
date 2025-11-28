@@ -21,10 +21,11 @@ public class ModItems {
     public static final DeferredItem<TieredArrowItem> CRADIUM_ARROW = ITEMS.register("cradium_arrow",
             () -> new TieredArrowItem(ModTiers.CRADIUM, new Item.Properties()));
 
+    public static final DeferredItem<Item> RAW_ADRENA = ITEMS.registerSimpleItem("raw_adrena");
+    public static final DeferredItem<Item> CRADIUM_SCRAP = ITEMS.registerSimpleItem("cradium_scrap");
     public static final DeferredItem<Item> ADRENA_NUGGET = ITEMS.registerSimpleItem("adrena_nugget");
     public static final DeferredItem<Item> CRADIUM_NUGGET = ITEMS.registerSimpleItem("cradium_nugget");
     public static final DeferredItem<Item> ADRENA_INGOT = ITEMS.registerSimpleItem("adrena_ingot");
-    public static final DeferredItem<Item> CRADIUM_SCRAP = ITEMS.registerSimpleItem("cradium_scrap");
     public static final DeferredItem<Item> CRADIUM_INGOT = ITEMS.registerSimpleItem("cradium_ingot");
 
     public static void register(IEventBus eventBus) {

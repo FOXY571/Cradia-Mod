@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "adrena_ingot",
+  "ingredient": {
+    "item": "cradia:adrena_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "cradia:adrena_ingot"
+  }
+}

@@ -40,6 +40,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cradium_ingot", has(ModItems.CRADIUM_INGOT))
                 .save(recipeOutput);
 
+        // raw_adrena_block
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_ADRENA_BLOCK)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.RAW_ADRENA)
+                .unlockedBy("has_raw_adrena", has(ModItems.RAW_ADRENA))
+                .save(recipeOutput);
+
         // adrena_long_sword
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ADRENA_LONG_SWORD)
                 .pattern(" X ")
@@ -82,6 +91,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cradium_nugget", has(ModItems.CRADIUM_NUGGET))
                 .save(recipeOutput);
 
+        // raw_adrena
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ADRENA, 9)
+                .requires(ModBlocks.RAW_ADRENA_BLOCK)
+                .unlockedBy("has_raw_adrena_block", has(ModBlocks.RAW_ADRENA_BLOCK))
+                .save(recipeOutput);
+
+        // cradim_scrap
+        List<ItemLike> cradium_scrap_smeltables = List.of(ModBlocks.CRADIUM_ORE);
+        oreSmelting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 600, "cradium_scrap");
+        oreBlasting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 300, "cradium_scrap");
+
         // adrena_nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ADRENA_NUGGET, 9)
                 .requires(ModItems.ADRENA_INGOT)
@@ -93,6 +113,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.CRADIUM_INGOT)
                 .unlockedBy("has_cradium_ingot", has(ModItems.CRADIUM_INGOT))
                 .save(recipeOutput);
+
+        // adrena_ingot
+        List<ItemLike> raw_adrena_smeltables = List.of(ModBlocks.ADRENA_ORE, ModBlocks.DEEPSLATE_ADRENA_ORE, ModItems.RAW_ADRENA);
+        oreSmelting(recipeOutput, raw_adrena_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 200, "adrena_ingot");
+        oreBlasting(recipeOutput, raw_adrena_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 100, "adrena_ingot");
 
         // adrena_ingot_from_nuggets
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADRENA_INGOT)
@@ -110,11 +135,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.ADRENA_BLOCK)
                 .unlockedBy("has_adrena_block", has(ModBlocks.ADRENA_BLOCK))
                 .save(recipeOutput, "cradia:adrena_ingot_from_adrena_block");
-
-        // cradim_scrap_from_smelting_cradium_ore & cradium_scrap_from_blasting_cradium_ore
-        List<ItemLike> cradium_scrap_smeltables = List.of(ModBlocks.CRADIUM_ORE);
-        oreSmelting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0f, 600, "cradium_scrap");
-        oreBlasting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0f, 300, "cradium_scrap");
 
         // cradium_ingot
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CRADIUM_INGOT)

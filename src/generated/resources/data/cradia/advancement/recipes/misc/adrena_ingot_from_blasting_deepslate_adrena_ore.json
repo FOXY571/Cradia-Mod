@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_adrena_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:deepslate_adrena_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cradia:adrena_ingot_from_blasting_deepslate_adrena_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate_adrena_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cradia:adrena_ingot_from_blasting_deepslate_adrena_ore"
+    ]
+  }
+}

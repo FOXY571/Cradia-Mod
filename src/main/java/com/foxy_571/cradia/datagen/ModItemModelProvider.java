@@ -23,10 +23,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         customModelItem(ModItems.ADRENA_LONG_SWORD.get(), "long_handheld");
         basicItem(ModItems.ADRENA_ARROW.get());
         basicItem(ModItems.CRADIUM_ARROW.get());
+        basicItem(ModItems.RAW_ADRENA.get());
+        basicItem(ModItems.CRADIUM_SCRAP.get());
         basicItem(ModItems.ADRENA_NUGGET.get());
         basicItem(ModItems.CRADIUM_NUGGET.get());
         basicItem(ModItems.ADRENA_INGOT.get());
-        basicItem(ModItems.CRADIUM_SCRAP.get());
         basicItem(ModItems.CRADIUM_INGOT.get());
     }
 

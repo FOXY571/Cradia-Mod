@@ -1,5 +1,8 @@
 {
   "values": [
-    "cradia:adrena_block"
+    "cradia:adrena_ore",
+    "cradia:deepslate_adrena_ore",
+    "cradia:adrena_block",
+    "cradia:raw_adrena_block"
   ]
 }

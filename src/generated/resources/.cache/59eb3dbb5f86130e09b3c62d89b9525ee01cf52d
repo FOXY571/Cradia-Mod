@@ -1,4 +1,7 @@
-// 1.21	2025-11-27T15:28:17.3796318	Loot Tables
+// 1.21	2025-11-28T15:45:27.6758286	Loot Tables
 5bb3c075ed24ca5d825ef58fb1a976d5b20af4d8 data/cradia/loot_table/blocks/adrena_block.json
+2015d099aeaea7324604ff463fc775f204d12898 data/cradia/loot_table/blocks/adrena_ore.json
 4a100d99582f75a891337bbb06642cef7277d233 data/cradia/loot_table/blocks/cradium_block.json
 72bc246790ab31d04af8e460cf9bd6ef741fe7db data/cradia/loot_table/blocks/cradium_ore.json
+49a43f7448419432e266d8f0147db0f0c6aea50d data/cradia/loot_table/blocks/deepslate_adrena_ore.json
+922289fa60a9d23823afdd3c8809b0eb96c960b8 data/cradia/loot_table/blocks/raw_adrena_block.json

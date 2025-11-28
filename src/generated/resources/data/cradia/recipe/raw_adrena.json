@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cradia:raw_adrena_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cradia:raw_adrena"
+  }
+}

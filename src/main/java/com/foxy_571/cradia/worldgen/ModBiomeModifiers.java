@@ -13,15 +13,21 @@ import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_CRADIUM_METEOR = registerKey("add_cradium_meteor");
+    public static final ResourceKey<BiomeModifier> ADRENA_ORE = registerKey("add_adrena_ore");
+    public static final ResourceKey<BiomeModifier> CRADIUM_METEOR = registerKey("add_cradium_meteor");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_CRADIUM_METEOR, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADRENA_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRADIUM_METEOR_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ADRENA_ORE)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(CRADIUM_METEOR, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRADIUM_METEOR)),
                 GenerationStep.Decoration.LOCAL_MODIFICATIONS));
     }
 

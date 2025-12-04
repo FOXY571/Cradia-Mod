@@ -1,15 +1,20 @@
 {
-  "item.cradia.adrena_ingot": "Adrena Ingot",
-  "item.cradia.adrena_nugget": "Adrena Nugget",
   "item.cradia.adrena_long_sword": "Adrena Long Sword",
-  "item.cradia.adrena_arrow": "Adrena Arrow",
-  "item.cradia.cradium_scrap": "Cradium Scrap",
-  "item.cradia.cradium_ingot": "Cradium Ingot",
-  "item.cradia.cradium_nugget": "Cradium Nugget",
   "item.cradia.cradium_long_sword": "Cradium Long Sword",
+  "item.cradia.adrena_arrow": "Adrena Arrow",
   "item.cradia.cradium_arrow": "Cradium Arrow",
+  "item.cradia.raw_adrena": "Raw Adrena",
+  "item.cradia.cradium_scrap": "Cradium Scrap",
+  "item.cradia.adrena_nugget": "Adrena Nugget",
+  "item.cradia.cradium_nugget": "Cradium Nugget",
+  "item.cradia.adrena_ingot": "Adrena Ingot",
+  "item.cradia.cradium_ingot": "Cradium Ingot",
 
+  "block.cradia.adrena_ore": "Adrena Ore",
+  "block.cradia.deepslate_adrena_ore": "Deepslate Adrena Ore",
   "block.cradia.cradium_ore": "Cradium Ore",
+  "block.cradia.raw_adrena_block": "Raw Adrena Block",
+  "block.cradia.adrena_block": "Adrena Block",
   "block.cradia.cradium_block": "Cradium Block",
 
   "creativetab.cradia.cradia_tab": "Cradia"

@@ -13,9 +13,9 @@
   "block.cradia.adrena_ore": "Adrena Ore",
   "block.cradia.deepslate_adrena_ore": "Deepslate Adrena Ore",
   "block.cradia.cradium_ore": "Cradium Ore",
-  "block.cradia.raw_adrena_block": "Raw Adrena Block",
-  "block.cradia.adrena_block": "Adrena Block",
-  "block.cradia.cradium_block": "Cradium Block",
+  "block.cradia.raw_adrena_block": "Block of Raw Adrena",
+  "block.cradia.adrena_block": "Block of Adrena",
+  "block.cradia.cradium_block": "Block of Cradium",
 
   "creativetab.cradia.cradia_tab": "Cradia"
 }

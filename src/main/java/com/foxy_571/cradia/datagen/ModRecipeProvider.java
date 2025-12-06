@@ -22,25 +22,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
-        // adrena_block
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADRENA_BLOCK)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.ADRENA_INGOT)
-                .unlockedBy("has_adrena_ingot", has(ModItems.ADRENA_INGOT))
-                .save(recipeOutput);
+        ingotBlockNuggetSet(recipeOutput, ModItems.ADRENA_INGOT, ModBlocks.ADRENA_BLOCK, ModItems.ADRENA_NUGGET);
+        ingotBlockNuggetSet(recipeOutput, ModItems.CRADIUM_INGOT, ModBlocks.CRADIUM_BLOCK, ModItems.CRADIUM_NUGGET);
 
-        // cradium_block
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRADIUM_BLOCK)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.CRADIUM_INGOT)
-                .unlockedBy("has_cradium_ingot", has(ModItems.CRADIUM_INGOT))
-                .save(recipeOutput);
-
-        // raw_adrena_block
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_ADRENA_BLOCK)
                 .pattern("###")
                 .pattern("###")
@@ -49,117 +33,86 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_raw_adrena", has(ModItems.RAW_ADRENA))
                 .save(recipeOutput);
 
-        // adrena_long_sword
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ADRENA_LONG_SWORD)
-                .pattern(" X ")
-                .pattern(" X ")
-                .pattern("X#X")
-                .define('#', Items.STICK)
-                .define('X', ModItems.ADRENA_INGOT)
-                .unlockedBy("has_adrena_ingot", has(ModItems.ADRENA_INGOT))
-                .save(recipeOutput);
+        longSword(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_LONG_SWORD);
+        longSword(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_LONG_SWORD);
 
-        // cradium_long_sword
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRADIUM_LONG_SWORD)
-                .pattern(" X ")
-                .pattern(" X ")
-                .pattern("X#X")
-                .define('#', Items.STICK)
-                .define('X', ModItems.CRADIUM_INGOT)
-                .unlockedBy("has_cradium_ingot", has(ModItems.CRADIUM_INGOT))
-                .save(recipeOutput);
+        arrow(recipeOutput, ModItems.ADRENA_NUGGET, ModItems.ADRENA_ARROW);
+        arrow(recipeOutput, ModItems.CRADIUM_NUGGET, ModItems.CRADIUM_ARROW);
 
-        // adrena_arrow
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ADRENA_ARROW, 4)
-                .pattern("X")
-                .pattern("#")
-                .pattern("Y")
-                .define('#', Items.STICK)
-                .define('X', ModItems.ADRENA_NUGGET)
-                .define('Y', Items.FEATHER)
-                .unlockedBy("has_adrena_nugget", has(ModItems.ADRENA_NUGGET))
-                .save(recipeOutput);
-
-        // cradium_arrow
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRADIUM_ARROW, 4)
-                .pattern("X")
-                .pattern("#")
-                .pattern("Y")
-                .define('#', Items.STICK)
-                .define('X', ModItems.CRADIUM_NUGGET)
-                .define('Y', Items.FEATHER)
-                .unlockedBy("has_cradium_nugget", has(ModItems.CRADIUM_NUGGET))
-                .save(recipeOutput);
-
-        // raw_adrena
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ADRENA, 9)
                 .requires(ModBlocks.RAW_ADRENA_BLOCK)
                 .unlockedBy("has_raw_adrena_block", has(ModBlocks.RAW_ADRENA_BLOCK))
                 .save(recipeOutput);
 
-        // cradim_scrap
         List<ItemLike> cradium_scrap_smeltables = List.of(ModBlocks.CRADIUM_ORE);
         oreSmelting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 600, "cradium_scrap");
         oreBlasting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 300, "cradium_scrap");
 
-        // adrena_nugget
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ADRENA_NUGGET, 9)
-                .requires(ModItems.ADRENA_INGOT)
-                .unlockedBy("has_adrena_ingot", has(ModItems.ADRENA_INGOT))
-                .save(recipeOutput);
+        List<ItemLike> adrena_ingot_smeltables = List.of(ModBlocks.ADRENA_ORE, ModBlocks.DEEPSLATE_ADRENA_ORE, ModItems.RAW_ADRENA);
+        oreSmelting(recipeOutput, adrena_ingot_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 200, "adrena_ingot");
+        oreBlasting(recipeOutput, adrena_ingot_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 100, "adrena_ingot");
 
-        // cradium_nugget
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRADIUM_NUGGET, 9)
-                .requires(ModItems.CRADIUM_INGOT)
-                .unlockedBy("has_cradium_ingot", has(ModItems.CRADIUM_INGOT))
-                .save(recipeOutput);
-
-        // adrena_ingot
-        List<ItemLike> raw_adrena_smeltables = List.of(ModBlocks.ADRENA_ORE, ModBlocks.DEEPSLATE_ADRENA_ORE, ModItems.RAW_ADRENA);
-        oreSmelting(recipeOutput, raw_adrena_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 200, "adrena_ingot");
-        oreBlasting(recipeOutput, raw_adrena_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 100, "adrena_ingot");
-
-        // adrena_ingot_from_nuggets
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADRENA_INGOT)
-                .group("adrena_ingot")
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.ADRENA_NUGGET)
-                .unlockedBy("has_adrena_nugget", has(ModItems.ADRENA_NUGGET))
-                .save(recipeOutput, "cradia:adrena_ingot_from_nuggets");
-
-        // adrena_ingot_from_adrena_block
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ADRENA_INGOT, 9)
-                .group("adrena_ingot")
-                .requires(ModBlocks.ADRENA_BLOCK)
-                .unlockedBy("has_adrena_block", has(ModBlocks.ADRENA_BLOCK))
-                .save(recipeOutput, "cradia:adrena_ingot_from_adrena_block");
-
-        // cradium_ingot
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CRADIUM_INGOT)
                 .group("cradium_ingot")
                 .pattern("##")
                 .pattern("##")
                 .define('#', ModItems.CRADIUM_SCRAP)
                 .unlockedBy("has_cradium_scrap", has(ModItems.CRADIUM_SCRAP)).save(recipeOutput);
+    }
 
-        // cradium_ingot_from_nuggets
+    protected static void longSword(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .pattern(" X ")
+                .pattern(" X ")
+                .pattern("X#X")
+                .define('#', Items.STICK)
+                .define('X', material)
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void arrow(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result, 4)
+                .pattern("X")
+                .pattern("#")
+                .pattern("Y")
+                .define('#', Items.STICK)
+                .define('X', material)
+                .define('Y', Items.FEATHER)
+                .unlockedBy("has_feather", has(Items.FEATHER))
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void ingotBlockNuggetSet(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike ingot, @NotNull ItemLike block, @NotNull ItemLike nugget) {
+        // Ingot from block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingot, 9)
+                .group(getItemName(ingot))
+                .requires(block)
+                .unlockedBy(getHasName(block), has(block))
+                .save(recipeOutput, Cradia.MOD_ID + ":" + getItemName(ingot) + "_from_" + getItemName(block));
+        // Ingot from nugget
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CRADIUM_INGOT)
-                .group("cradium_ingot")
+                .group(getItemName(ingot))
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .define('#', ModItems.CRADIUM_NUGGET)
-                .unlockedBy("has_cradium_nugget", has(ModItems.CRADIUM_NUGGET))
-                .save(recipeOutput, "cradia:cradium_ingot_from_nuggets");
-
-        // cradium_ingot_from_cradium_block
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRADIUM_INGOT, 9)
-                .group("cradium_ingot")
-                .requires(ModBlocks.CRADIUM_BLOCK)
-                .unlockedBy("has_cradium_block", has(ModBlocks.CRADIUM_BLOCK))
-                .save(recipeOutput, "cradia:cradium_ingot_from_cradium_block");
+                .define('#', nugget)
+                .unlockedBy(getHasName(nugget), has(nugget))
+                .save(recipeOutput, Cradia.MOD_ID + ":" + getItemName(ingot) + "_from_nuggets");
+        // Block from ingots
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ingot)
+                .unlockedBy(getHasName(ingot), has(ingot))
+                .save(recipeOutput);
+        // Nugget from ingot
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nugget, 9)
+                .requires(ingot)
+                .unlockedBy(getHasName(ingot), has(ingot))
+                .save(recipeOutput);
     }
 
     protected static void oreSmelting(@NotNull RecipeOutput recipeOutput, List<ItemLike> ingredients, @NotNull RecipeCategory category, @NotNull ItemLike result, float experience, int cookingTime, @NotNull String group) {

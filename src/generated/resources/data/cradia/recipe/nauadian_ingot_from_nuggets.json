@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "nauadian_ingot",
+  "key": {
+    "#": {
+      "item": "cradia:nauadian_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:nauadian_ingot"
+  }
+}

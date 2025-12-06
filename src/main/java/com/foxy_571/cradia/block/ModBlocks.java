@@ -23,8 +23,12 @@ public class ModBlocks {
             () -> new Block(Block.Properties.ofFullCopy(Blocks.DEEPSLATE_GOLD_ORE)));
     public static final DeferredBlock<Block> CRADIUM_ORE = registerBlock("cradium_ore",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final DeferredBlock<Block> NAUADIAN_SHARD_BLOCK = registerBlock("nauadian_shard_block",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final DeferredBlock<Block> RAW_ADRENA_BLOCK = registerBlock("raw_adrena_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
+    public static final DeferredBlock<Block> NAUADIAN_BLOCK = registerBlock("nauadian_block",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final DeferredBlock<Block> ADRENA_BLOCK = registerBlock("adrena_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
     public static final DeferredBlock<Block> CRADIUM_BLOCK = registerBlock("cradium_block",

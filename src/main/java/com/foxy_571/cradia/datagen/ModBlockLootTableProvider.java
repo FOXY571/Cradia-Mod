@@ -22,7 +22,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropOre(ModBlocks.ADRENA_ORE.get(), ModItems.RAW_ADRENA.get());
         dropOre(ModBlocks.DEEPSLATE_ADRENA_ORE.get(), ModItems.RAW_ADRENA.get());
         dropSelf(ModBlocks.CRADIUM_ORE.get());
+        dropSelf(ModBlocks.NAUADIAN_SHARD_BLOCK.get());
         dropSelf(ModBlocks.RAW_ADRENA_BLOCK.get());
+        dropSelf(ModBlocks.NAUADIAN_BLOCK.get());
         dropSelf(ModBlocks.ADRENA_BLOCK.get());
         dropSelf(ModBlocks.CRADIUM_BLOCK.get());
     }

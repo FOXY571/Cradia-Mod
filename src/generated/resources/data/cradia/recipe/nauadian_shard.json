@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cradia:nauadian_shard_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cradia:nauadian_shard"
+  }
+}

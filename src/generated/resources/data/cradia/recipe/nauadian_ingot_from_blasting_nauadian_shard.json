@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "nauadian_ingot",
+  "ingredient": {
+    "item": "cradia:nauadian_shard"
+  },
+  "result": {
+    "count": 1,
+    "id": "cradia:nauadian_ingot"
+  }
+}

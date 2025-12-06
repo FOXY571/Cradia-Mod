@@ -21,6 +21,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(ItemTags.ARROWS).add(
+                ModItems.NAUADIAN_ARROW.get(),
                 ModItems.ADRENA_ARROW.get(),
                 ModItems.CRADIUM_ARROW.get()
         );

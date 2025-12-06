@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "nauadian_ingot",
+  "ingredients": [
+    {
+      "item": "cradia:nauadian_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cradia:nauadian_ingot"
+  }
+}

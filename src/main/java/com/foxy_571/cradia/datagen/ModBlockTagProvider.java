@@ -24,9 +24,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.ADRENA_ORE.get(),
                 ModBlocks.DEEPSLATE_ADRENA_ORE.get(),
                 ModBlocks.CRADIUM_ORE.get(),
+                ModBlocks.NAUADIAN_SHARD_BLOCK.get(),
                 ModBlocks.RAW_ADRENA_BLOCK.get(),
+                ModBlocks.NAUADIAN_BLOCK.get(),
                 ModBlocks.ADRENA_BLOCK.get(),
                 ModBlocks.CRADIUM_BLOCK.get()
+        );
+        tag(BlockTags.NEEDS_IRON_TOOL).add(
+                ModBlocks.NAUADIAN_SHARD_BLOCK.get(),
+                ModBlocks.NAUADIAN_BLOCK.get()
         );
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 ModBlocks.ADRENA_ORE.get(),

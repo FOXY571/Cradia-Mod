@@ -22,9 +22,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
+        ingotBlockNuggetSet(recipeOutput, ModItems.NAUADIAN_INGOT, ModBlocks.NAUADIAN_BLOCK, ModItems.NAUADIAN_NUGGET);
         ingotBlockNuggetSet(recipeOutput, ModItems.ADRENA_INGOT, ModBlocks.ADRENA_BLOCK, ModItems.ADRENA_NUGGET);
         ingotBlockNuggetSet(recipeOutput, ModItems.CRADIUM_INGOT, ModBlocks.CRADIUM_BLOCK, ModItems.CRADIUM_NUGGET);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUADIAN_SHARD_BLOCK)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.NAUADIAN_SHARD)
+                .unlockedBy("has_nauadian_shard", has(ModItems.NAUADIAN_SHARD))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_ADRENA_BLOCK)
                 .pattern("###")
                 .pattern("###")
@@ -33,24 +41,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_raw_adrena", has(ModItems.RAW_ADRENA))
                 .save(recipeOutput);
 
+        longSword(recipeOutput, ModItems.NAUADIAN_INGOT, ModItems.NAUADIAN_LONG_SWORD);
         longSword(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_LONG_SWORD);
         longSword(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_LONG_SWORD);
 
+        arrow(recipeOutput, ModItems.NAUADIAN_NUGGET, ModItems.NAUADIAN_ARROW);
         arrow(recipeOutput, ModItems.ADRENA_NUGGET, ModItems.ADRENA_ARROW);
         arrow(recipeOutput, ModItems.CRADIUM_NUGGET, ModItems.CRADIUM_ARROW);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NAUADIAN_SHARD, 9)
+                .requires(ModBlocks.NAUADIAN_SHARD_BLOCK)
+                .unlockedBy("has_nauadian_shard_block", has(ModBlocks.NAUADIAN_SHARD_BLOCK))
+                .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ADRENA, 9)
                 .requires(ModBlocks.RAW_ADRENA_BLOCK)
                 .unlockedBy("has_raw_adrena_block", has(ModBlocks.RAW_ADRENA_BLOCK))
                 .save(recipeOutput);
 
-        List<ItemLike> cradium_scrap_smeltables = List.of(ModBlocks.CRADIUM_ORE);
-        oreSmelting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 600, "cradium_scrap");
-        oreBlasting(recipeOutput, cradium_scrap_smeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 300, "cradium_scrap");
+        List<ItemLike> cradiumScrapSmeltables = List.of(ModBlocks.CRADIUM_ORE);
+        oreSmelting(recipeOutput, cradiumScrapSmeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 600, "cradium_scrap");
+        oreBlasting(recipeOutput, cradiumScrapSmeltables, RecipeCategory.MISC, ModItems.CRADIUM_SCRAP,2.0F, 300, "cradium_scrap");
 
-        List<ItemLike> adrena_ingot_smeltables = List.of(ModBlocks.ADRENA_ORE, ModBlocks.DEEPSLATE_ADRENA_ORE, ModItems.RAW_ADRENA);
-        oreSmelting(recipeOutput, adrena_ingot_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 200, "adrena_ingot");
-        oreBlasting(recipeOutput, adrena_ingot_smeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 100, "adrena_ingot");
+        List<ItemLike> nauadianIngotSmeltables = List.of(ModItems.NAUADIAN_SHARD);
+        oreSmelting(recipeOutput, nauadianIngotSmeltables, RecipeCategory.MISC, ModItems.NAUADIAN_INGOT,1.0F, 200, "nauadian_ingot");
+        oreBlasting(recipeOutput, nauadianIngotSmeltables, RecipeCategory.MISC, ModItems.NAUADIAN_INGOT,1.0F, 100, "nauadian_ingot");
+
+        List<ItemLike> adrenaIngotSmeltables = List.of(ModBlocks.ADRENA_ORE, ModBlocks.DEEPSLATE_ADRENA_ORE, ModItems.RAW_ADRENA);
+        oreSmelting(recipeOutput, adrenaIngotSmeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 200, "adrena_ingot");
+        oreBlasting(recipeOutput, adrenaIngotSmeltables, RecipeCategory.MISC, ModItems.ADRENA_INGOT,1.0F, 100, "adrena_ingot");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CRADIUM_INGOT)
                 .group("cradium_ingot")
@@ -92,7 +110,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(block), has(block))
                 .save(recipeOutput, Cradia.MOD_ID + ":" + getItemName(ingot) + "_from_" + getItemName(block));
         // Ingot from nugget
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CRADIUM_INGOT)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingot)
                 .group(getItemName(ingot))
                 .pattern("###")
                 .pattern("###")
@@ -125,7 +143,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static <T extends AbstractCookingRecipe> void oreCooking(@NotNull RecipeOutput recipeOutput, RecipeSerializer<T> cookingSerializer, AbstractCookingRecipe.@NotNull Factory<T> factory,
                                                                        List<ItemLike> ingredients, @NotNull RecipeCategory category, @NotNull ItemLike result, float experience, int cookingTime, @NotNull String group, String recipeName) {
-        for(ItemLike itemlike : ingredients) {
+        for (ItemLike itemlike : ingredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), category, result, experience, cookingTime, cookingSerializer, factory).group(group).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, Cradia.MOD_ID + ":" + getItemName(result) + recipeName + "_" + getItemName(itemlike));
         }

@@ -1,16 +1,6 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cradium_nugget": {
-      "conditions": {
-        "items": [
-          {
-            "items": "cradia:cradium_nugget"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_feather": {
       "conditions": {
         "items": [
@@ -21,9 +11,19 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_nauadian_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:nauadian_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cradia:cradium_arrow"
+        "recipe": "cradia:nauadian_arrow"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -32,12 +32,12 @@
     [
       "has_the_recipe",
       "has_feather",
-      "has_cradium_nugget"
+      "has_nauadian_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cradia:cradium_arrow"
+      "cradia:nauadian_arrow"
     ]
   }
 }

@@ -2,9 +2,11 @@ package com.foxy_571.cradia.item;
 
 import com.foxy_571.cradia.Cradia;
 import com.foxy_571.cradia.item.custom.LongSwordItem;
+import com.foxy_571.cradia.item.custom.ScytheItem;
 import com.foxy_571.cradia.item.custom.TieredArrowItem;
 import com.foxy_571.cradia.item.tier.ModTiers;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,12 +14,27 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Cradia.MOD_ID);
 
-    public static final DeferredItem<Item> NAUADIAN_LONG_SWORD = ITEMS.register("nauadian_long_sword",
+    public static final DeferredItem<LongSwordItem> NAUADIAN_LONG_SWORD = ITEMS.register("nauadian_long_sword",
             () -> new LongSwordItem(ModTiers.NAUADIAN, (new Item.Properties()).attributes(LongSwordItem.createAttributes(ModTiers.NAUADIAN, 3, -2.7F))));
-    public static final DeferredItem<Item> ADRENA_LONG_SWORD = ITEMS.register("adrena_long_sword",
+    public static final DeferredItem<ScytheItem> NAUADIAN_SCYTHE = ITEMS.register("nauadian_scythe",
+            () -> new ScytheItem(ModTiers.NAUADIAN, (new Item.Properties()).attributes(ScytheItem.createAttributes(ModTiers.NAUADIAN, 2, -2.4F))));
+    public static final DeferredItem<SwordItem> NAUADIAN_DAGGER = ITEMS.register("nauadian_dagger",
+            () -> new SwordItem(ModTiers.NAUADIAN, (new Item.Properties()).attributes(SwordItem.createAttributes(ModTiers.NAUADIAN, 0.5F, -3.5F))));
+
+    public static final DeferredItem<LongSwordItem> ADRENA_LONG_SWORD = ITEMS.register("adrena_long_sword",
             () -> new LongSwordItem(ModTiers.ADRENA, (new Item.Properties()).attributes(LongSwordItem.createAttributes(ModTiers.ADRENA, 3, -2.7F))));
+    public static final DeferredItem<ScytheItem> ADRENA_SCYTHE = ITEMS.register("adrena_scythe",
+            () -> new ScytheItem(ModTiers.ADRENA, (new Item.Properties()).attributes(ScytheItem.createAttributes(ModTiers.ADRENA, 2, -2.4F))));
+    public static final DeferredItem<SwordItem> ADRENA_DAGGER = ITEMS.register("adrena_dagger",
+            () -> new SwordItem(ModTiers.ADRENA, (new Item.Properties()).attributes(SwordItem.createAttributes(ModTiers.ADRENA, 0.5F, -3.5F))));
+
     public static final DeferredItem<LongSwordItem> CRADIUM_LONG_SWORD = ITEMS.register("cradium_long_sword",
             () -> new LongSwordItem(ModTiers.CRADIUM, (new Item.Properties()).attributes(LongSwordItem.createAttributes(ModTiers.CRADIUM, 3, -2.7F))));
+    public static final DeferredItem<ScytheItem> CRADIUM_SCYTHE = ITEMS.register("cradium_scythe",
+            () -> new ScytheItem(ModTiers.CRADIUM, (new Item.Properties()).attributes(ScytheItem.createAttributes(ModTiers.CRADIUM, 2, -2.4F))));
+    public static final DeferredItem<SwordItem> CRADIUM_DAGGER = ITEMS.register("cradium_dagger",
+            () -> new SwordItem(ModTiers.CRADIUM, (new Item.Properties()).attributes(SwordItem.createAttributes(ModTiers.CRADIUM, 0.5F, -3.5F))));
+
     public static final DeferredItem<TieredArrowItem> NAUADIAN_ARROW = ITEMS.register("nauadian_arrow",
             () -> new TieredArrowItem(ModTiers.NAUADIAN, new Item.Properties()));
     public static final DeferredItem<TieredArrowItem> ADRENA_ARROW = ITEMS.register("adrena_arrow",

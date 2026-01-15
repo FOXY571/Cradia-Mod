@@ -20,8 +20,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         customModelItem(ModItems.NAUADIAN_LONG_SWORD.get(), "long_handheld");
-        customModelItem(ModItems.CRADIUM_LONG_SWORD.get(), "long_handheld");
+        customModelItem(ModItems.NAUADIAN_SCYTHE.get(), "long_handheld");
+        customModelItem(ModItems.NAUADIAN_DAGGER.get(), "handheld_dagger");
         customModelItem(ModItems.ADRENA_LONG_SWORD.get(), "long_handheld");
+        customModelItem(ModItems.ADRENA_SCYTHE.get(), "long_handheld");
+        customModelItem(ModItems.ADRENA_DAGGER.get(), "handheld_dagger");
+        customModelItem(ModItems.CRADIUM_LONG_SWORD.get(), "long_handheld");
+        customModelItem(ModItems.CRADIUM_SCYTHE.get(), "long_handheld");
+        customModelItem(ModItems.CRADIUM_DAGGER.get(), "handheld_dagger");
         basicItem(ModItems.NAUADIAN_ARROW.get());
         basicItem(ModItems.ADRENA_ARROW.get());
         basicItem(ModItems.CRADIUM_ARROW.get());

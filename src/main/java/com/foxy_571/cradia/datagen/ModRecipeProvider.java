@@ -45,6 +45,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         longSword(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_LONG_SWORD);
         longSword(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_LONG_SWORD);
 
+        scythe(recipeOutput, ModItems.NAUADIAN_INGOT, ModItems.NAUADIAN_SCYTHE);
+        scythe(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_SCYTHE);
+        scythe(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_SCYTHE);
+
+        dagger(recipeOutput, ModItems.NAUADIAN_INGOT, ModItems.NAUADIAN_DAGGER);
+        dagger(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_DAGGER);
+        dagger(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_DAGGER);
+
         arrow(recipeOutput, ModItems.NAUADIAN_NUGGET, ModItems.NAUADIAN_ARROW);
         arrow(recipeOutput, ModItems.ADRENA_NUGGET, ModItems.ADRENA_ARROW);
         arrow(recipeOutput, ModItems.CRADIUM_NUGGET, ModItems.CRADIUM_ARROW);
@@ -83,6 +91,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" X ")
                 .pattern(" X ")
                 .pattern("X#X")
+                .define('#', Items.STICK)
+                .define('X', material)
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void scythe(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .pattern("XXX")
+                .pattern(" #X")
+                .pattern(" # ")
+                .define('#', Items.STICK)
+                .define('X', material)
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void dagger(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .pattern(" X ")
+                .pattern(" # ")
                 .define('#', Items.STICK)
                 .define('X', material)
                 .unlockedBy(getHasName(material), has(material))

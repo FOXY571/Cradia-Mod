@@ -1,19 +1,22 @@
-// 1.21	2026-01-14T15:15:09.9826959	Item Models: cradia
+// 1.21	2026-01-31T21:42:16.3061699	Item Models: cradia
 f2258d1820911f02f23a99c0ac92df644d1fb16a assets/cradia/models/item/adrena_arrow.json
+31d48ec274e3fd4ffa9e93447a2c9826215e41fc assets/cradia/models/item/adrena_dagger.json
 18e77a2f635fbf19ebd51cae72a3b82f0df8ffd2 assets/cradia/models/item/adrena_ingot.json
-b17ff5fd30605e565d99de00316384dffe8a1a34 assets/cradia/models/item/adrena_long_sword.json
+ca11599014ee8e479786a9e91e609f841f38de69 assets/cradia/models/item/adrena_long_sword.json
 a78b8d0b40e910311bb7b8e743f70a26663fb49b assets/cradia/models/item/adrena_nugget.json
-d66c83b0c3331fa5e4ba9e18d96561f60f4c984f assets/cradia/models/item/adrena_scythe.json
+0c6c4ae9658e79bd014442cf8deaca594301c530 assets/cradia/models/item/adrena_scythe.json
 73f9a99597cdd306be08c03739a9075d531f92f3 assets/cradia/models/item/cradium_arrow.json
+f1f947b7603a87b593e81cd06cba53df1542c1d1 assets/cradia/models/item/cradium_dagger.json
 858b5dcf8402a56e05936f12a44a0c8809eacad0 assets/cradia/models/item/cradium_ingot.json
-9ecfac71025824a91aa4166d34d62605c501035f assets/cradia/models/item/cradium_long_sword.json
+f36883c8ba1dbe30d3a7fc7bc7e12c7f625a130c assets/cradia/models/item/cradium_long_sword.json
 ebb129edfc73c23af1f04ce4ae7798e631e16fd2 assets/cradia/models/item/cradium_nugget.json
 0d184987f6c98c52920747a025e77b293df962a1 assets/cradia/models/item/cradium_scrap.json
-5a5f40b1629dc6d78986a0c0d6ac1d5b42326fa2 assets/cradia/models/item/cradium_scythe.json
+148a5c97e38a0a5bc2759d0869defe69f0885dc4 assets/cradia/models/item/cradium_scythe.json
 f99c75ba052466d52d37a7d9ca07273ef21a79fa assets/cradia/models/item/nauadian_arrow.json
+dd18c331e8acc91530474ca0bc94957cd99fd0c0 assets/cradia/models/item/nauadian_dagger.json
 a8ad32e3bf65a6acc6137faeef76736cf18e0836 assets/cradia/models/item/nauadian_ingot.json
-c6c3dd8d61cae3abf7dd8cf9456f2681f3036885 assets/cradia/models/item/nauadian_long_sword.json
+a0c223c9e384ca701fc695cb011890402d874335 assets/cradia/models/item/nauadian_long_sword.json
 58a8792738229f720841dabccfc38f265ee6de38 assets/cradia/models/item/nauadian_nugget.json
-222a7fe50a2e60310dbd22bcdfdd9952a998ff51 assets/cradia/models/item/nauadian_scythe.json
+aed5467a6ac1b9e8a1bb02c375c714b646f619fd assets/cradia/models/item/nauadian_scythe.json
 768bf7fbd3e43e2b17d840892a7512fd545a6913 assets/cradia/models/item/nauadian_shard.json
 ef79a1c14cd99acc9169118da7a622d1bd6fa6e6 assets/cradia/models/item/raw_adrena.json

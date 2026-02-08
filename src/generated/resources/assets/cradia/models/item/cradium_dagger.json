@@ -1,0 +1,6 @@
+{
+  "parent": "cradia:item/handheld_dagger",
+  "textures": {
+    "layer0": "cradia:item/cradium_dagger"
+  }
+}

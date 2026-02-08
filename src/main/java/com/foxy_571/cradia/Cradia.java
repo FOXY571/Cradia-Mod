@@ -2,11 +2,15 @@ package com.foxy_571.cradia;
 
 import com.foxy_571.cradia.block.ModBlocks;
 import com.foxy_571.cradia.entity.ModEntities;
+import com.foxy_571.cradia.model.DaggerModel;
+import com.foxy_571.cradia.model.ModModelLayerLocations;
+import com.foxy_571.cradia.entity.client.ThrownDaggerRenderer;
 import com.foxy_571.cradia.entity.client.TieredArrowRenderer;
 import com.foxy_571.cradia.item.ModCreativeModeTabs;
 import com.foxy_571.cradia.item.ModItems;
 import com.foxy_571.cradia.worldgen.feature.ModFeatures;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -61,7 +65,13 @@ public class Cradia {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.THROWN_DAGGER.get(), ThrownDaggerRenderer::new);
             EntityRenderers.register(ModEntities.TIERED_ARROW.get(), TieredArrowRenderer::new);
+        }
+
+        @SubscribeEvent
+        static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(ModModelLayerLocations.DAGGER_LAYER, DaggerModel::createLayer);
         }
     }
 }

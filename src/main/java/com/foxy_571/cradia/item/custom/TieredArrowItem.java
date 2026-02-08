@@ -33,7 +33,7 @@ public class TieredArrowItem extends ArrowItem {
         return arrow;
     }
 
-    public CradiaTier getTier() {
+    public @NotNull CradiaTier getTier() {
         return tier;
     }
 }

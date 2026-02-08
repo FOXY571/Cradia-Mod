@@ -38,15 +38,11 @@ public class TieredArrow extends AbstractArrow {
 
     private void updateType() {
         Item item = getPickupItem().getItem();
-
-        TieredArrowItem tieredArrowItem = (TieredArrowItem) getDefaultPickupItem().getItem();
-        if (item instanceof TieredArrowItem) {
-            tieredArrowItem = (TieredArrowItem) item;
+        if (item instanceof TieredArrowItem tieredArrowItem) {
+            CradiaTier tier = tieredArrowItem.getTier();
+            entityData.set(TIER_NAME, tier.getName());
+            setBaseDamage(tier.getAttackDamageBonus());
         }
-
-        CradiaTier tier = tieredArrowItem.getTier();
-        entityData.set(TIER_NAME, tier.getName());
-        setBaseDamage(tier.getAttackDamageBonus());
     }
 
     @Override
@@ -67,7 +63,7 @@ public class TieredArrow extends AbstractArrow {
 
     @Override
     protected @NotNull ItemStack getDefaultPickupItem() {
-        return new ItemStack(ModItems.ADRENA_ARROW.get());
+        return new ItemStack(ModItems.NAUADIAN_ARROW.get());
     }
 
     @Override

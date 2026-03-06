@@ -1,10 +1,7 @@
 package com.foxy_571.cradia.item;
 
 import com.foxy_571.cradia.Cradia;
-import com.foxy_571.cradia.item.custom.DaggerItem;
-import com.foxy_571.cradia.item.custom.LongSwordItem;
-import com.foxy_571.cradia.item.custom.ScytheItem;
-import com.foxy_571.cradia.item.custom.TieredArrowItem;
+import com.foxy_571.cradia.item.custom.*;
 import com.foxy_571.cradia.item.tier.ModTiers;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -42,6 +39,9 @@ public class ModItems {
             () -> new TieredArrowItem(ModTiers.ADRENA, new Item.Properties()));
     public static final DeferredItem<TieredArrowItem> CRADIUM_ARROW = ITEMS.register("cradium_arrow",
             () -> new TieredArrowItem(ModTiers.CRADIUM, new Item.Properties()));
+
+    public static final DeferredItem<SpecialItem> REINFORCED_STICK = ITEMS.register("reinforced_stick",
+            () -> new SpecialItem(new Item.Properties()));
 
     public static final DeferredItem<Item> NAUADIAN_SHARD = ITEMS.registerSimpleItem("nauadian_shard");
     public static final DeferredItem<Item> RAW_ADRENA = ITEMS.registerSimpleItem("raw_adrena");

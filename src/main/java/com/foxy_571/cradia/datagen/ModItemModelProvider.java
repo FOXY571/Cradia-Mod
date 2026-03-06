@@ -30,6 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         customModelItem(ModItems.CRADIUM_DAGGER.get(), "handheld_dagger");
         basicItem(ModItems.NAUADIAN_ARROW.get());
         basicItem(ModItems.ADRENA_ARROW.get());
+        customModelItem(ModItems.REINFORCED_STICK.get(), "handheld", "minecraft");
         basicItem(ModItems.CRADIUM_ARROW.get());
         basicItem(ModItems.NAUADIAN_SHARD.get());
         basicItem(ModItems.RAW_ADRENA.get());
@@ -43,9 +44,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     protected void customModelItem(Item item, String modelName) {
+        customModelItem(item, modelName, Cradia.MOD_ID);
+    }
+
+    protected void customModelItem(Item item, String modelName, String namespace) {
         ResourceLocation resourceLocation = Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item));
         getBuilder(item.toString())
-                .parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(Cradia.MOD_ID, "item/" + modelName)))
+                .parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(namespace, "item/" + modelName)))
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(resourceLocation.getNamespace(), "item/" + resourceLocation.getPath()));
     }
 }

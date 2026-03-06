@@ -84,6 +84,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("##")
                 .define('#', ModItems.CRADIUM_SCRAP)
                 .unlockedBy("has_cradium_scrap", has(ModItems.CRADIUM_SCRAP)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REINFORCED_STICK, 4)
+                .group("reinforced_stick")
+                .pattern(" # ")
+                .pattern("#X#")
+                .pattern(" # ")
+                .define('#', Items.STICK)
+                .define('X', Items.IRON_INGOT)
+                .unlockedBy("has_iron", has(Items.IRON_INGOT)).save(recipeOutput);
     }
 
     protected static void longSword(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
@@ -91,7 +100,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" X ")
                 .pattern(" X ")
                 .pattern("X#X")
-                .define('#', Items.STICK)
+                .define('#', ModItems.REINFORCED_STICK)
                 .define('X', material)
                 .unlockedBy(getHasName(material), has(material))
                 .save(recipeOutput);
@@ -102,7 +111,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("XXX")
                 .pattern(" #X")
                 .pattern(" # ")
-                .define('#', Items.STICK)
+                .define('#', ModItems.REINFORCED_STICK)
                 .define('X', material)
                 .unlockedBy(getHasName(material), has(material))
                 .save(recipeOutput);
@@ -112,7 +121,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
                 .pattern(" X ")
                 .pattern(" # ")
-                .define('#', Items.STICK)
+                .define('#', ModItems.REINFORCED_STICK)
                 .define('X', material)
                 .unlockedBy(getHasName(material), has(material))
                 .save(recipeOutput);

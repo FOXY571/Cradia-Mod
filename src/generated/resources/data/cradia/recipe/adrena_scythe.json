@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "cradia:reinforced_stick"
     },
     "X": {
       "item": "cradia:adrena_ingot"

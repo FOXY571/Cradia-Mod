@@ -30,6 +30,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.ADRENA_BLOCK.get(),
                 ModBlocks.CRADIUM_BLOCK.get()
         );
+
         tag(BlockTags.NEEDS_IRON_TOOL).add(
                 ModBlocks.NAUADIAN_SHARD_BLOCK.get(),
                 ModBlocks.NAUADIAN_BLOCK.get()
@@ -42,6 +43,26 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         );
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add(
                 ModBlocks.CRADIUM_ORE.get(),
+                ModBlocks.CRADIUM_BLOCK.get()
+        );
+
+        tag(Tags.Blocks.ORES).add(
+                ModBlocks.ADRENA_ORE.get(),
+                ModBlocks.DEEPSLATE_ADRENA_ORE.get(),
+                ModBlocks.CRADIUM_ORE.get()
+        );
+        tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(
+                ModBlocks.ADRENA_ORE.get()
+        );
+        tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(
+                ModBlocks.DEEPSLATE_ADRENA_ORE.get()
+        );
+
+        tag(Tags.Blocks.STORAGE_BLOCKS).add(
+                ModBlocks.NAUADIAN_SHARD_BLOCK.get(),
+                ModBlocks.RAW_ADRENA_BLOCK.get(),
+                ModBlocks.NAUADIAN_BLOCK.get(),
+                ModBlocks.ADRENA_BLOCK.get(),
                 ModBlocks.CRADIUM_BLOCK.get()
         );
     }

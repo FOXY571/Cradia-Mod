@@ -22,6 +22,8 @@
   "item.cradia.adrena_ingot": "Adrena Ingot",
   "item.cradia.cradium_ingot": "Cradium Ingot",
 
+  "item.cradia.special_item.use": "You used the special item",
+
   "block.cradia.adrena_ore": "Adrena Ore",
   "block.cradia.deepslate_adrena_ore": "Deepslate Adrena Ore",
   "block.cradia.cradium_ore": "Cradium Ore",

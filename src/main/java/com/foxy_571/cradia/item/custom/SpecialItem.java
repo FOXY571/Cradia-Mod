@@ -2,6 +2,7 @@ package com.foxy_571.cradia.item.custom;
 
 import com.foxy_571.cradia.Cradia;
 import com.foxy_571.cradia.item.ModItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +27,7 @@ public class SpecialItem extends Item {
                 player.addItem(new ItemStack(ModItems.NAUADIAN_INGOT.get()));
                 player.addItem(new ItemStack(ModItems.ADRENA_INGOT.get()));
                 player.addItem(new ItemStack(ModItems.CRADIUM_INGOT.get()));
+                player.displayClientMessage(Component.translatable("item.cradia.special_item.use"), true);
 
                 Cradia.LOGGER.info("{} used the special item!", player.getGameProfile().getName());
             }

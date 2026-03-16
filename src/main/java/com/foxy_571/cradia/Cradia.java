@@ -1,7 +1,9 @@
 package com.foxy_571.cradia;
 
 import com.foxy_571.cradia.block.ModBlocks;
-import com.foxy_571.cradia.entity.ModEntities;
+import com.foxy_571.cradia.entity.ModEntityTypes;
+import com.foxy_571.cradia.entity.client.NauadianSkeletonRenderer;
+import com.foxy_571.cradia.entity.client.NauadianZombieRenderer;
 import com.foxy_571.cradia.model.DaggerModel;
 import com.foxy_571.cradia.model.ModModelLayerLocations;
 import com.foxy_571.cradia.entity.client.ThrownDaggerRenderer;
@@ -40,7 +42,7 @@ public class Cradia {
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
-        ModEntities.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
 
         ModFeatures.register(modEventBus);
 
@@ -50,9 +52,7 @@ public class Cradia {
         NeoForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
-
-    }
+    private void commonSetup(FMLCommonSetupEvent event) {}
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -65,8 +65,11 @@ public class Cradia {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.THROWN_DAGGER.get(), ThrownDaggerRenderer::new);
-            EntityRenderers.register(ModEntities.TIERED_ARROW.get(), TieredArrowRenderer::new);
+            EntityRenderers.register(ModEntityTypes.NAUADIAN_ZOMBIE.get(), NauadianZombieRenderer::new);
+            EntityRenderers.register(ModEntityTypes.NAUADIAN_SKELETON.get(), NauadianSkeletonRenderer::new);
+
+            EntityRenderers.register(ModEntityTypes.THROWN_DAGGER.get(), ThrownDaggerRenderer::new);
+            EntityRenderers.register(ModEntityTypes.TIERED_ARROW.get(), TieredArrowRenderer::new);
         }
 
         @SubscribeEvent

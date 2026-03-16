@@ -1,16 +1,23 @@
 package com.foxy_571.cradia.item;
 
 import com.foxy_571.cradia.Cradia;
+import com.foxy_571.cradia.entity.ModEntityTypes;
 import com.foxy_571.cradia.item.custom.*;
 import com.foxy_571.cradia.item.tier.ModTiers;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Cradia.MOD_ID);
+
+    public static final DeferredItem<DeferredSpawnEggItem> NAUADIAN_ZOMBIE_SPAWN_EGG = ITEMS.register("nauadian_zombie_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntityTypes.NAUADIAN_ZOMBIE, 0x1baebc, 0x658b6a, new Item.Properties()));
+    public static final DeferredItem<DeferredSpawnEggItem> NAUADIAN_SKELETON_SPAWN_EGG = ITEMS.register("nauadian_skeleton_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntityTypes.NAUADIAN_SKELETON, 0xacbcca, 0x414d55, new Item.Properties()));
 
     public static final DeferredItem<LongSwordItem> NAUADIAN_LONG_SWORD = ITEMS.register("nauadian_long_sword",
             () -> new LongSwordItem(ModTiers.NAUADIAN, (new Item.Properties()).attributes(LongSwordItem.createAttributes(ModTiers.NAUADIAN, 3, -2.7F))));

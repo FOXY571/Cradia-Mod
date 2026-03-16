@@ -19,6 +19,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        withExistingParent(ModItems.NAUADIAN_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.NAUADIAN_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+//        customModelItem(ModItems.NAUADIAN_ZOMBIE_SPAWN_EGG.get(), "template_spawn_egg", "minecraft");
+//        customModelItem(ModItems.NAUADIAN_SKELETON_SPAWN_EGG.get(), "template_spawn_egg", "minecraft");
         customModelItem(ModItems.NAUADIAN_LONG_SWORD.get(), "handheld_long");
         customModelItem(ModItems.NAUADIAN_SCYTHE.get(), "handheld_long");
         customModelItem(ModItems.NAUADIAN_DAGGER.get(), "handheld_dagger");

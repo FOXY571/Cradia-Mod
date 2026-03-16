@@ -1,4 +1,4 @@
-// 1.21	2025-12-06T15:54:43.4893825	Loot Tables
+// 1.21	2026-03-12T13:14:26.0218118	Loot Tables
 5bb3c075ed24ca5d825ef58fb1a976d5b20af4d8 data/cradia/loot_table/blocks/adrena_block.json
 2015d099aeaea7324604ff463fc775f204d12898 data/cradia/loot_table/blocks/adrena_ore.json
 4a100d99582f75a891337bbb06642cef7277d233 data/cradia/loot_table/blocks/cradium_block.json
@@ -7,3 +7,5 @@
 dcc474cb7f96595fa42f84138caa7c50bbbdf0ac data/cradia/loot_table/blocks/nauadian_block.json
 718c316483ccc611fefe2b15b878a95e9d21d12b data/cradia/loot_table/blocks/nauadian_shard_block.json
 922289fa60a9d23823afdd3c8809b0eb96c960b8 data/cradia/loot_table/blocks/raw_adrena_block.json
+43eb1c4b050b0e60d31f58d8f6fffe3bec778c69 data/cradia/loot_table/entities/nauadian_skeleton.json
+6b6b8f613a49dac6f187864cd00c92ed5f47d290 data/cradia/loot_table/entities/nauadian_zombie.json

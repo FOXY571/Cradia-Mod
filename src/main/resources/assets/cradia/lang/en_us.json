@@ -1,4 +1,6 @@
 {
+  "item.cradia.nauadian_zombie_spawn_egg": "Nauadian Zombie Spawn Egg",
+  "item.cradia.nauadian_skeleton_spawn_egg": "Nauadian Skeleton Spawn Egg",
   "item.cradia.nauadian_long_sword": "Nauadian Long Sword",
   "item.cradia.nauadian_scythe": "Nauadian Scythe",
   "item.cradia.nauadian_dagger": "Nauadian Dagger",
@@ -32,6 +34,9 @@
   "block.cradia.nauadian_block": "Block of Nauadian",
   "block.cradia.adrena_block": "Block of Adrena",
   "block.cradia.cradium_block": "Block of Cradium",
+
+  "entity.cradia.nauadian_zombie": "Nauadian Zombie",
+  "entity.cradia.nauadian_skeleton": "Nauadian Skeleton",
 
   "creativetab.cradia.cradia_tab": "Cradia"
 }

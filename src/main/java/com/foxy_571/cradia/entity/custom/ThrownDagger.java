@@ -1,6 +1,6 @@
 package com.foxy_571.cradia.entity.custom;
 
-import com.foxy_571.cradia.entity.ModEntities;
+import com.foxy_571.cradia.entity.ModEntityTypes;
 import com.foxy_571.cradia.item.ModItems;
 import com.foxy_571.cradia.item.custom.DaggerItem;
 import com.foxy_571.cradia.item.tier.CradiaTier;
@@ -36,12 +36,12 @@ public class ThrownDagger extends AbstractArrow {
     }
 
     public ThrownDagger(Level level, LivingEntity shooter, ItemStack pickupItemStack) {
-        super(ModEntities.THROWN_DAGGER.get(), shooter, level, pickupItemStack, null);
+        super(ModEntityTypes.THROWN_DAGGER.get(), shooter, level, pickupItemStack, null);
         updateType();
     }
 
     public ThrownDagger(Level level, double x, double y, double z, ItemStack pickupItemStack) {
-        super(ModEntities.THROWN_DAGGER.get(), x, y, z, level, pickupItemStack, pickupItemStack);
+        super(ModEntityTypes.THROWN_DAGGER.get(), x, y, z, level, pickupItemStack, pickupItemStack);
         updateType();
     }
 

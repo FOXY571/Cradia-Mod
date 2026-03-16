@@ -1,4 +1,8 @@
-// 1.21	2025-12-06T15:54:43.4863845	Tags for minecraft:block mod id cradia
+// 1.21	2026-03-11T10:37:37.456103	Tags for minecraft:block mod id cradia
+b301c1df6afe44bdd17692b25b204b4dc30651a4 data/c/tags/block/ores.json
+26904dab0f6ce118c9159c00b06a3d13a31528d6 data/c/tags/block/ores_in_ground/deepslate.json
+a9785c3f70cd9bf6aa298944865d22b24105b1fb data/c/tags/block/ores_in_ground/stone.json
+3faf8a0d3c38a641ce30ea8c9d03fe8c43a07819 data/c/tags/block/storage_blocks.json
 309ec5d884b197000ef47cea01aec2243358cc85 data/minecraft/tags/block/mineable/pickaxe.json
 3b4b5ed06387ab31d5f4084d4430e868d8d8ae64 data/minecraft/tags/block/needs_diamond_tool.json
 d7c5598de092807be192e15b72585cf1f939d82a data/minecraft/tags/block/needs_iron_tool.json

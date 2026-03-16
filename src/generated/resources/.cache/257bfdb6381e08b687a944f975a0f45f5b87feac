@@ -1,0 +1,5 @@
+// 1.21	2026-03-12T13:16:46.0421258	Tags for minecraft:entity_type mod id cradia
+a4b0d26d27b865744184572e55b9f5914aaf887a data/minecraft/tags/entity_type/arrows.json
+2ce1fb98425a718afefb4fe94c7e8f121f1f8b04 data/minecraft/tags/entity_type/impact_projectiles.json
+b8a92467bedbf9c17afb8a302ef60d69f284dcc5 data/minecraft/tags/entity_type/skeletons.json
+8b262878ba46de536c95db62444d22e13761c028 data/minecraft/tags/entity_type/zombies.json

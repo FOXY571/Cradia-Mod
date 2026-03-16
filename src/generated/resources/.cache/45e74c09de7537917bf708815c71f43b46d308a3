@@ -1,4 +1,4 @@
-// 1.21	2026-03-06T14:24:15.3178908	Item Models: cradia
+// 1.21	2026-03-16T17:39:34.1572448	Item Models: cradia
 f2258d1820911f02f23a99c0ac92df644d1fb16a assets/cradia/models/item/adrena_arrow.json
 31d48ec274e3fd4ffa9e93447a2c9826215e41fc assets/cradia/models/item/adrena_dagger.json
 18e77a2f635fbf19ebd51cae72a3b82f0df8ffd2 assets/cradia/models/item/adrena_ingot.json
@@ -19,5 +19,7 @@ a0c223c9e384ca701fc695cb011890402d874335 assets/cradia/models/item/nauadian_long
 58a8792738229f720841dabccfc38f265ee6de38 assets/cradia/models/item/nauadian_nugget.json
 aed5467a6ac1b9e8a1bb02c375c714b646f619fd assets/cradia/models/item/nauadian_scythe.json
 768bf7fbd3e43e2b17d840892a7512fd545a6913 assets/cradia/models/item/nauadian_shard.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/cradia/models/item/nauadian_skeleton_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/cradia/models/item/nauadian_zombie_spawn_egg.json
 ef79a1c14cd99acc9169118da7a622d1bd6fa6e6 assets/cradia/models/item/raw_adrena.json
 6cf2745091f2bc4daea9766c680e65865f617425 assets/cradia/models/item/reinforced_stick.json

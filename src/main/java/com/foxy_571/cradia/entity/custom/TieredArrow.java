@@ -1,6 +1,6 @@
 package com.foxy_571.cradia.entity.custom;
 
-import com.foxy_571.cradia.entity.ModEntities;
+import com.foxy_571.cradia.entity.ModEntityTypes;
 import com.foxy_571.cradia.item.ModItems;
 import com.foxy_571.cradia.item.custom.TieredArrowItem;
 import com.foxy_571.cradia.item.tier.CradiaTier;
@@ -18,6 +18,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 public class TieredArrow extends AbstractArrow {
+    private double tierDamage = 0.0;
+
     private final static EntityDataAccessor<String> TIER_NAME =
             SynchedEntityData.defineId(TieredArrow.class, EntityDataSerializers.STRING);
 
@@ -27,12 +29,12 @@ public class TieredArrow extends AbstractArrow {
     }
 
     public TieredArrow(Level level, double x, double y, double z, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
-        super(ModEntities.TIERED_ARROW.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
+        super(ModEntityTypes.TIERED_ARROW.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
         updateType();
     }
 
     public TieredArrow(Level level, LivingEntity owner, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
-        super(ModEntities.TIERED_ARROW.get(), owner, level, pickupItemStack, firedFromWeapon);
+        super(ModEntityTypes.TIERED_ARROW.get(), owner, level, pickupItemStack, firedFromWeapon);
         updateType();
     }
 
@@ -41,8 +43,15 @@ public class TieredArrow extends AbstractArrow {
         if (item instanceof TieredArrowItem tieredArrowItem) {
             CradiaTier tier = tieredArrowItem.getTier();
             entityData.set(TIER_NAME, tier.getName());
-            setBaseDamage(tier.getAttackDamageBonus());
+            tierDamage = tier.getAttackDamageBonus();
+            setBaseDamage(2.0 + tierDamage);
         }
+    }
+
+    @Override
+    public void setBaseDamageFromMob(float velocity) {
+        // Adding tier damage to whole value because doing (velocity * (2.0F + tierDamage)) does not increase damage that much
+        setBaseDamage((velocity * 2.0F) + random.triangle((double)level().getDifficulty().getId() * 0.11, 0.57425) + tierDamage);
     }
 
     @Override

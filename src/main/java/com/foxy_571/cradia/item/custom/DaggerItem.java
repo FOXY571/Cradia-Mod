@@ -40,6 +40,11 @@ public class DaggerItem extends TieredItem implements ProjectileItem {
         return false;
     }
 
+    @Override
+    public boolean isBookEnchantable(@NotNull ItemStack stack, @NotNull ItemStack book) {
+        return false;
+    }
+
     public static ItemAttributeModifiers createAttributes(Tier tier, int attackDamage, float attackSpeed) {
         return createAttributes(tier, (float)attackDamage, attackSpeed);
     }

@@ -1,4 +1,4 @@
-// 1.21	2026-03-11T10:37:37.4581026	Tags for minecraft:item mod id cradia
+// 1.21	2026-03-16T20:29:34.2874393	Tags for minecraft:item mod id cradia
 79bcddcab9a32b104aae3bf1084cf58379a2d600 data/c/tags/item/ingots.json
 bfe568b98ad9ae8e991fb678221dd220a470ad3b data/c/tags/item/nuggets.json
 b301c1df6afe44bdd17692b25b204b4dc30651a4 data/c/tags/item/ores.json
@@ -7,7 +7,8 @@ a9785c3f70cd9bf6aa298944865d22b24105b1fb data/c/tags/item/ores_in_ground/stone.j
 bb8dca89b3a40dbc92777dabe99b3a9476be797e data/c/tags/item/raw_materials.json
 404fc5fba40ad0653a507c956c0a6e2b9ea9543f data/c/tags/item/rods.json
 3faf8a0d3c38a641ce30ea8c9d03fe8c43a07819 data/c/tags/item/storage_blocks.json
-0223f5627983ac8bf8eea7918cc16a97cd89b109 data/c/tags/item/tools/melee_weapon.json
+6addb824d739b129504ffa4180cd233a0a516252 data/c/tags/item/tools/melee_weapon.json
 640c79cef0b49d4387687194724768144bdbe78d data/c/tags/item/tools/ranged_weapon.json
 4a2f5cf997f1b7a6f4e8db06661007867eaf961e data/minecraft/tags/item/arrows.json
+cfe6b704b1ea569c1b0aa51a8c85b36609e8d5c0 data/minecraft/tags/item/axes.json
 b758a5fd058ea04aa1008fcd56b8339d600b0748 data/minecraft/tags/item/swords.json

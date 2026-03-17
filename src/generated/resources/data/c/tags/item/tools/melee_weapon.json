@@ -2,12 +2,15 @@
   "values": [
     "cradia:nauadian_long_sword",
     "cradia:nauadian_scythe",
+    "cradia:nauadian_battle_axe",
     "cradia:nauadian_dagger",
     "cradia:adrena_long_sword",
     "cradia:adrena_scythe",
+    "cradia:adrena_battle_axe",
     "cradia:adrena_dagger",
     "cradia:cradium_long_sword",
     "cradia:cradium_scythe",
+    "cradia:cradium_battle_axe",
     "cradia:cradium_dagger"
   ]
 }

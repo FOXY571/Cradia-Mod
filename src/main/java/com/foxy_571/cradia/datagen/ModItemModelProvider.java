@@ -21,16 +21,17 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         withExistingParent(ModItems.NAUADIAN_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.NAUADIAN_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-//        customModelItem(ModItems.NAUADIAN_ZOMBIE_SPAWN_EGG.get(), "template_spawn_egg", "minecraft");
-//        customModelItem(ModItems.NAUADIAN_SKELETON_SPAWN_EGG.get(), "template_spawn_egg", "minecraft");
         customModelItem(ModItems.NAUADIAN_LONG_SWORD.get(), "handheld_long");
         customModelItem(ModItems.NAUADIAN_SCYTHE.get(), "handheld_long");
+        customModelItem(ModItems.NAUADIAN_BATTLE_AXE.get(), "handheld_long");
         customModelItem(ModItems.NAUADIAN_DAGGER.get(), "handheld_dagger");
         customModelItem(ModItems.ADRENA_LONG_SWORD.get(), "handheld_long");
         customModelItem(ModItems.ADRENA_SCYTHE.get(), "handheld_long");
+        customModelItem(ModItems.ADRENA_BATTLE_AXE.get(), "handheld_long");
         customModelItem(ModItems.ADRENA_DAGGER.get(), "handheld_dagger");
         customModelItem(ModItems.CRADIUM_LONG_SWORD.get(), "handheld_long");
         customModelItem(ModItems.CRADIUM_SCYTHE.get(), "handheld_long");
+        customModelItem(ModItems.CRADIUM_BATTLE_AXE.get(), "handheld_long");
         customModelItem(ModItems.CRADIUM_DAGGER.get(), "handheld_dagger");
         basicItem(ModItems.NAUADIAN_ARROW.get());
         basicItem(ModItems.ADRENA_ARROW.get());

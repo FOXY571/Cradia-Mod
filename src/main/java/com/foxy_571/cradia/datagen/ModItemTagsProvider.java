@@ -27,6 +27,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 ModItems.ADRENA_LONG_SWORD.get(),
                 ModItems.CRADIUM_LONG_SWORD.get()
         );
+        tag(ItemTags.AXES).add(
+                ModItems.NAUADIAN_BATTLE_AXE.get(),
+                ModItems.ADRENA_BATTLE_AXE.get(),
+                ModItems.CRADIUM_BATTLE_AXE.get()
+        );
         tag(ItemTags.ARROWS).add(
                 ModItems.NAUADIAN_ARROW.get(),
                 ModItems.ADRENA_ARROW.get(),
@@ -35,12 +40,15 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(Tags.Items.MELEE_WEAPON_TOOLS).add(
                 ModItems.NAUADIAN_LONG_SWORD.get(),
                 ModItems.NAUADIAN_SCYTHE.get(),
+                ModItems.NAUADIAN_BATTLE_AXE.get(),
                 ModItems.NAUADIAN_DAGGER.get(),
                 ModItems.ADRENA_LONG_SWORD.get(),
                 ModItems.ADRENA_SCYTHE.get(),
+                ModItems.ADRENA_BATTLE_AXE.get(),
                 ModItems.ADRENA_DAGGER.get(),
                 ModItems.CRADIUM_LONG_SWORD.get(),
                 ModItems.CRADIUM_SCYTHE.get(),
+                ModItems.CRADIUM_BATTLE_AXE.get(),
                 ModItems.CRADIUM_DAGGER.get()
         );
         tag(Tags.Items.RANGED_WEAPON_TOOLS).add(

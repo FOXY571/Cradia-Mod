@@ -1,11 +1,13 @@
-// 1.21	2026-03-16T17:39:34.1572448	Item Models: cradia
+// 1.21	2026-03-16T20:27:26.8061318	Item Models: cradia
 f2258d1820911f02f23a99c0ac92df644d1fb16a assets/cradia/models/item/adrena_arrow.json
+f50f6f212ba00e7ee06f6a3a440321ff1cca2bdb assets/cradia/models/item/adrena_battle_axe.json
 31d48ec274e3fd4ffa9e93447a2c9826215e41fc assets/cradia/models/item/adrena_dagger.json
 18e77a2f635fbf19ebd51cae72a3b82f0df8ffd2 assets/cradia/models/item/adrena_ingot.json
 ca11599014ee8e479786a9e91e609f841f38de69 assets/cradia/models/item/adrena_long_sword.json
 a78b8d0b40e910311bb7b8e743f70a26663fb49b assets/cradia/models/item/adrena_nugget.json
 0c6c4ae9658e79bd014442cf8deaca594301c530 assets/cradia/models/item/adrena_scythe.json
 73f9a99597cdd306be08c03739a9075d531f92f3 assets/cradia/models/item/cradium_arrow.json
+4dab1db28e8cbb803538f9ba8b520ec051c8a2b0 assets/cradia/models/item/cradium_battle_axe.json
 f1f947b7603a87b593e81cd06cba53df1542c1d1 assets/cradia/models/item/cradium_dagger.json
 858b5dcf8402a56e05936f12a44a0c8809eacad0 assets/cradia/models/item/cradium_ingot.json
 f36883c8ba1dbe30d3a7fc7bc7e12c7f625a130c assets/cradia/models/item/cradium_long_sword.json
@@ -13,6 +15,7 @@ ebb129edfc73c23af1f04ce4ae7798e631e16fd2 assets/cradia/models/item/cradium_nugge
 0d184987f6c98c52920747a025e77b293df962a1 assets/cradia/models/item/cradium_scrap.json
 148a5c97e38a0a5bc2759d0869defe69f0885dc4 assets/cradia/models/item/cradium_scythe.json
 f99c75ba052466d52d37a7d9ca07273ef21a79fa assets/cradia/models/item/nauadian_arrow.json
+2460c4e132f8a335caf5996f417be30baf37fdf2 assets/cradia/models/item/nauadian_battle_axe.json
 dd18c331e8acc91530474ca0bc94957cd99fd0c0 assets/cradia/models/item/nauadian_dagger.json
 a8ad32e3bf65a6acc6137faeef76736cf18e0836 assets/cradia/models/item/nauadian_ingot.json
 a0c223c9e384ca701fc695cb011890402d874335 assets/cradia/models/item/nauadian_long_sword.json

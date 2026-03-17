@@ -49,6 +49,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         scythe(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_SCYTHE);
         scythe(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_SCYTHE);
 
+        battleAxe(recipeOutput, ModItems.NAUADIAN_INGOT, ModItems.NAUADIAN_BATTLE_AXE);
+        battleAxe(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_BATTLE_AXE);
+        battleAxe(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_BATTLE_AXE);
+
         dagger(recipeOutput, ModItems.NAUADIAN_INGOT, ModItems.NAUADIAN_DAGGER);
         dagger(recipeOutput, ModItems.ADRENA_INGOT, ModItems.ADRENA_DAGGER);
         dagger(recipeOutput, ModItems.CRADIUM_INGOT, ModItems.CRADIUM_DAGGER);
@@ -110,6 +114,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
                 .pattern("XXX")
                 .pattern(" #X")
+                .pattern(" # ")
+                .define('#', ModItems.REINFORCED_STICK)
+                .define('X', material)
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void battleAxe(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .pattern("XXX")
+                .pattern("X#X")
                 .pattern(" # ")
                 .define('#', ModItems.REINFORCED_STICK)
                 .define('X', material)

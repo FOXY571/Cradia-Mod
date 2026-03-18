@@ -1,0 +1,8 @@
+{
+  "type": "cradia:entity_scaled_spawn",
+  "entity": "cradia:nauadian_skeleton",
+  "max_count": 2,
+  "min_count": 2,
+  "original": "minecraft:skeleton",
+  "scale": 0.15
+}

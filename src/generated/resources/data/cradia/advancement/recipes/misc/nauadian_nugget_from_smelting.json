@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nauadian_battle_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:nauadian_battle_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nauadian_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:nauadian_dagger"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nauadian_long_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:nauadian_long_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nauadian_scythe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:nauadian_scythe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cradia:nauadian_nugget_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nauadian_long_sword",
+      "has_nauadian_scythe",
+      "has_nauadian_battle_axe",
+      "has_nauadian_dagger"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cradia:nauadian_nugget_from_smelting"
+    ]
+  }
+}

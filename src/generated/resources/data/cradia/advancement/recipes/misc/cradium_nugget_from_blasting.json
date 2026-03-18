@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cradium_battle_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:cradium_battle_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cradium_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:cradium_dagger"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cradium_long_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:cradium_long_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cradium_scythe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cradia:cradium_scythe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cradia:cradium_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cradium_long_sword",
+      "has_cradium_scythe",
+      "has_cradium_battle_axe",
+      "has_cradium_dagger"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cradia:cradium_nugget_from_blasting"
+    ]
+  }
+}

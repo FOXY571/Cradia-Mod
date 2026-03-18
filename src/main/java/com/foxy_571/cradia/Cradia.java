@@ -41,9 +41,7 @@ public class Cradia {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
-
         ModEntityTypes.register(modEventBus);
-
         ModFeatures.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
@@ -56,9 +54,7 @@ public class Cradia {
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
-    }
+    public void onServerStarting(ServerStartingEvent event) {}
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = Cradia.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

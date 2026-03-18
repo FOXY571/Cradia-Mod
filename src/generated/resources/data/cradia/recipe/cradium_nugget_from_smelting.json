@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.2,
+  "ingredient": [
+    {
+      "item": "cradia:cradium_long_sword"
+    },
+    {
+      "item": "cradia:cradium_scythe"
+    },
+    {
+      "item": "cradia:cradium_battle_axe"
+    },
+    {
+      "item": "cradia:cradium_dagger"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:cradium_nugget"
+  }
+}

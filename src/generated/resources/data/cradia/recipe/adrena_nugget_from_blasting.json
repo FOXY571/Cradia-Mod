@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "cradia:adrena_long_sword"
+    },
+    {
+      "item": "cradia:adrena_scythe"
+    },
+    {
+      "item": "cradia:adrena_battle_axe"
+    },
+    {
+      "item": "cradia:adrena_dagger"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:adrena_nugget"
+  }
+}

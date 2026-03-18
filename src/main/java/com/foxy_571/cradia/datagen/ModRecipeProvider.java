@@ -97,6 +97,48 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.STICK)
                 .define('X', Items.IRON_INGOT)
                 .unlockedBy("has_iron", has(Items.IRON_INGOT)).save(recipeOutput);
+
+        Ingredient nauadianToolsIngredient = Ingredient.of(ModItems.NAUADIAN_LONG_SWORD, ModItems.NAUADIAN_SCYTHE, ModItems.NAUADIAN_BATTLE_AXE, ModItems.NAUADIAN_DAGGER);
+        SimpleCookingRecipeBuilder.smelting(nauadianToolsIngredient, RecipeCategory.MISC, ModItems.NAUADIAN_NUGGET, 0.1F, 200)
+                .unlockedBy("has_nauadian_long_sword", has(ModItems.NAUADIAN_LONG_SWORD))
+                .unlockedBy("has_nauadian_scythe", has(ModItems.NAUADIAN_SCYTHE))
+                .unlockedBy("has_nauadian_battle_axe", has(ModItems.NAUADIAN_BATTLE_AXE))
+                .unlockedBy("has_nauadian_dagger", has(ModItems.NAUADIAN_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":nauadian_nugget_from_smelting");
+        SimpleCookingRecipeBuilder.blasting(nauadianToolsIngredient, RecipeCategory.MISC, ModItems.NAUADIAN_NUGGET, 0.1F, 100)
+                .unlockedBy("has_nauadian_long_sword", has(ModItems.NAUADIAN_LONG_SWORD))
+                .unlockedBy("has_nauadian_scythe", has(ModItems.NAUADIAN_SCYTHE))
+                .unlockedBy("has_nauadian_battle_axe", has(ModItems.NAUADIAN_BATTLE_AXE))
+                .unlockedBy("has_nauadian_dagger", has(ModItems.NAUADIAN_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":nauadian_nugget_from_blasting");
+
+        Ingredient adrenaToolsIngredient = Ingredient.of(ModItems.ADRENA_LONG_SWORD, ModItems.ADRENA_SCYTHE, ModItems.ADRENA_BATTLE_AXE, ModItems.ADRENA_DAGGER);
+        SimpleCookingRecipeBuilder.smelting(adrenaToolsIngredient, RecipeCategory.MISC, ModItems.ADRENA_NUGGET, 0.1F, 200)
+                .unlockedBy("has_adrena_long_sword", has(ModItems.ADRENA_LONG_SWORD))
+                .unlockedBy("has_adrena_scythe", has(ModItems.ADRENA_SCYTHE))
+                .unlockedBy("has_adrena_battle_axe", has(ModItems.ADRENA_BATTLE_AXE))
+                .unlockedBy("has_adrena_dagger", has(ModItems.ADRENA_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":adrena_nugget_from_smelting");
+        SimpleCookingRecipeBuilder.blasting(adrenaToolsIngredient, RecipeCategory.MISC, ModItems.ADRENA_NUGGET, 0.1F, 100)
+                .unlockedBy("has_adrena_long_sword", has(ModItems.ADRENA_LONG_SWORD))
+                .unlockedBy("has_adrena_scythe", has(ModItems.ADRENA_SCYTHE))
+                .unlockedBy("has_adrena_battle_axe", has(ModItems.ADRENA_BATTLE_AXE))
+                .unlockedBy("has_adrena_dagger", has(ModItems.ADRENA_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":adrena_nugget_from_blasting");
+
+        Ingredient cradiumToolsIngredient = Ingredient.of(ModItems.CRADIUM_LONG_SWORD, ModItems.CRADIUM_SCYTHE, ModItems.CRADIUM_BATTLE_AXE, ModItems.CRADIUM_DAGGER);
+        SimpleCookingRecipeBuilder.smelting(cradiumToolsIngredient, RecipeCategory.MISC, ModItems.CRADIUM_NUGGET, 0.2F, 600)
+                .unlockedBy("has_cradium_long_sword", has(ModItems.CRADIUM_LONG_SWORD))
+                .unlockedBy("has_cradium_scythe", has(ModItems.CRADIUM_SCYTHE))
+                .unlockedBy("has_cradium_battle_axe", has(ModItems.CRADIUM_BATTLE_AXE))
+                .unlockedBy("has_cradium_dagger", has(ModItems.CRADIUM_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":cradium_nugget_from_smelting");
+        SimpleCookingRecipeBuilder.blasting(cradiumToolsIngredient, RecipeCategory.MISC, ModItems.CRADIUM_NUGGET, 0.2F, 300)
+                .unlockedBy("has_cradium_long_sword", has(ModItems.CRADIUM_LONG_SWORD))
+                .unlockedBy("has_cradium_scythe", has(ModItems.CRADIUM_SCYTHE))
+                .unlockedBy("has_cradium_battle_axe", has(ModItems.CRADIUM_BATTLE_AXE))
+                .unlockedBy("has_cradium_dagger", has(ModItems.CRADIUM_DAGGER))
+                .save(recipeOutput, Cradia.MOD_ID + ":cradium_nugget_from_blasting");
     }
 
     protected static void longSword(@NotNull RecipeOutput recipeOutput, @NotNull ItemLike material, @NotNull ItemLike result) {
@@ -194,8 +236,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreCooking(recipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, ingredients, category, result, experience, cookingTime, group, "_from_blasting");
     }
 
-    protected static <T extends AbstractCookingRecipe> void oreCooking(@NotNull RecipeOutput recipeOutput, RecipeSerializer<T> cookingSerializer, AbstractCookingRecipe.@NotNull Factory<T> factory,
-                                                                       List<ItemLike> ingredients, @NotNull RecipeCategory category, @NotNull ItemLike result, float experience, int cookingTime, @NotNull String group, String recipeName) {
+    protected static <T extends AbstractCookingRecipe> void oreCooking(@NotNull RecipeOutput recipeOutput, RecipeSerializer<T> cookingSerializer, AbstractCookingRecipe.@NotNull Factory<T> factory, List<ItemLike> ingredients, @NotNull RecipeCategory category, @NotNull ItemLike result, float experience, int cookingTime, @NotNull String group, String recipeName) {
         for (ItemLike itemlike : ingredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), category, result, experience, cookingTime, cookingSerializer, factory).group(group).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, Cradia.MOD_ID + ":" + getItemName(result) + recipeName + "_" + getItemName(itemlike));

@@ -17,10 +17,10 @@ import java.util.function.Supplier;
 public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, Cradia.MOD_ID);
 
-    public static Supplier<EntityType<NauadianSkeleton>> NAUADIAN_SKELETON;
-    public static Supplier<EntityType<NauadianZombie>> NAUADIAN_ZOMBIE;
-    public static Supplier<EntityType<TieredArrow>> TIERED_ARROW;
-    public static Supplier<EntityType<ThrownDagger>> THROWN_DAGGER;
+    public static final Supplier<EntityType<NauadianSkeleton>> NAUADIAN_SKELETON;
+    public static final Supplier<EntityType<NauadianZombie>> NAUADIAN_ZOMBIE;
+    public static final Supplier<EntityType<TieredArrow>> TIERED_ARROW;
+    public static final Supplier<EntityType<ThrownDagger>> THROWN_DAGGER;
 
     static {
         NAUADIAN_SKELETON = registerEntityType("nauadian_skeleton", EntityType.Builder.of(NauadianSkeleton::new, MobCategory.MONSTER).sized(0.6F, 1.99F).eyeHeight(1.74F).ridingOffset(-0.7F).clientTrackingRange(8));
@@ -29,7 +29,7 @@ public class ModEntityTypes {
         THROWN_DAGGER = registerEntityType("thrown_dagger", EntityType.Builder.<ThrownDagger>of(ThrownDagger::new, MobCategory.MISC).sized(0.5F, 0.5F).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20));
     }
 
-    public static <T extends Entity> Supplier<EntityType<T>> registerEntityType(String name, EntityType.Builder<T> builder) {
+    private static <T extends Entity> Supplier<EntityType<T>> registerEntityType(String name, EntityType.Builder<T> builder) {
         return ENTITY_TYPES.register(name, () -> builder.build(name));
     }
 

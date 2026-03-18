@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "cradia:nauadian_long_sword"
+    },
+    {
+      "item": "cradia:nauadian_scythe"
+    },
+    {
+      "item": "cradia:nauadian_battle_axe"
+    },
+    {
+      "item": "cradia:nauadian_dagger"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cradia:nauadian_nugget"
+  }
+}

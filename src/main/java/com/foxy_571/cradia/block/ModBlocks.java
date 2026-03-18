@@ -27,14 +27,14 @@ public class ModBlocks {
     public static DeferredBlock<Block> RAW_ADRENA_BLOCK;
 
     static {
-            ADRENA_ORE = registerBlock("adrena_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_ORE)));
-            DEEPSLATE_ADRENA_ORE = registerBlock("deepslate_adrena_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.DEEPSLATE_GOLD_ORE)));
-            CRADIUM_ORE = registerBlock("cradium_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
-            NAUADIAN_BLOCK = registerBlock("nauadian_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
-            ADRENA_BLOCK = registerBlock("adrena_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
-            CRADIUM_BLOCK = registerBlock("cradium_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).sound(SoundType.METAL).mapColor(MapColor.COLOR_LIGHT_GREEN)));
-            NAUADIAN_SHARD_BLOCK = registerBlock("nauadian_shard_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_LIGHT_BLUE)));
-            RAW_ADRENA_BLOCK = registerBlock("raw_adrena_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
+        ADRENA_ORE = registerBlock("adrena_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_ORE)));
+        DEEPSLATE_ADRENA_ORE = registerBlock("deepslate_adrena_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.DEEPSLATE_GOLD_ORE)));
+        CRADIUM_ORE = registerBlock("cradium_ore", () -> new Block(Block.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+        NAUADIAN_BLOCK = registerBlock("nauadian_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+        ADRENA_BLOCK = registerBlock("adrena_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
+        CRADIUM_BLOCK = registerBlock("cradium_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK).sound(SoundType.METAL).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+        NAUADIAN_SHARD_BLOCK = registerBlock("nauadian_shard_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+        RAW_ADRENA_BLOCK = registerBlock("raw_adrena_block", () -> new Block(Block.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.COLOR_RED)));
     }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
